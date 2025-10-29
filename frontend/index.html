@@ -97,6 +97,10 @@
       </label>
       <br /><br />
       <label>
+        Фамилия<br>
+        <input v-model="paymentName" required />
+      </label>
+      <label> <br>
         Номер карты:<br />
         <input v-model="paymentCard" pattern="\\d{16}" maxlength="16" required title="16 цифр" />
       </label>
