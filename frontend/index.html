@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Продажа билетов в кино на Vue</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap');
+  .h1{
+
+  }
+  body{
+    background-color: #cdd0ff;
+  }
+
   body {
     font-family: Arial, sans-serif;
     max-width: 600px;
@@ -13,25 +21,27 @@
   }
   button {
     padding: 8px 12px;
-    margin: 5px 3px;
+    margin: 5rem 3rem;
     cursor: pointer;
-  }
+    border: 2px solid;
+    border-radius: 5px;
+  } /* купить билет*/
   .seat {
     display: inline-block;
     width: 30px; height: 30px;
     line-height: 30px;
     margin: 3px;
-    border: 1px solid #333;
+    border: 6px solid #2c2c2c;
     text-align: center;
     user-select: none;
   }
   .taken {
-    background: #ccc;
+    background: #ffffff;
     cursor: not-allowed;
   }
   .selected {
     background: #4caf50;
-    color: white;
+    color: rgb(255, 255, 255);
   }
 </style>
 </head>
