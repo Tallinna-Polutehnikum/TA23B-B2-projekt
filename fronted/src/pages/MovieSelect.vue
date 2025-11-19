@@ -1,7 +1,7 @@
 <template>
   <div class="movie-page">
 
-    <!-- Баннер -->
+    
 <div
   v-if="movieId == 1"
   class="banner"
@@ -19,7 +19,7 @@
 </div>
     <div class="content">
 
-      <!-- Блок выбора -->
+      
       <div class="details">
         <h3>Выбор времени</h3>
 
@@ -72,9 +72,9 @@ import { useRoute, useRouter } from "vue-router"
 
 const route = useRoute()
 const router = useRouter()
-const movieId = Number(route.params.id) // Преобразуем к числу
+const movieId = Number(route.params.id) 
 
-// Фильмы
+
 const movies = [
   {
     id: 1,
@@ -132,7 +132,7 @@ function toggleSeat(seat) {
   }
 }
 
-// ====== Подтверждение брони с переходом на оплату ======
+
 function confirmBooking() {
   if (!selectedTime.value) {
     console.warn("Выберите время!")
@@ -158,7 +158,7 @@ function confirmBooking() {
 
 
 <style scoped>
-/* Используем твой стиль, немного расширяем под MovieSelect */
+
 
 .movie-page {
   min-height: 100vh;
