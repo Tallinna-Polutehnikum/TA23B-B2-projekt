@@ -17,7 +17,7 @@ const routes = [
     component: () => import('@/pages/MovieSelect.vue')
   },
   {
-    path: '/payment',          // ← новый маршрут для оплаты
+    path: '/payment',          
     name: 'Payment',
     component: () => import('@/pages/PaymentPage.vue')
   }
