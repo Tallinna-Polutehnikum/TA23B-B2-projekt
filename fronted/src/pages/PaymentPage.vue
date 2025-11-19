@@ -57,7 +57,7 @@ const movie = ref(null)
 const time = ref('')
 const seats = ref([])
 
-// Поля оплаты
+
 const cardName = ref('')
 const cardNumber = ref('')
 const expiry = ref('')
@@ -79,10 +79,8 @@ function payTicket() {
     return
   }
 
-  // Здесь можно добавить реальную обработку платежа через API
   alert(`Оплата билета на "${movie.value.title}" успешно произведена!\nМеста: ${seats.join(', ')}\nПодтверждение отправлено на ${email.value}`)
 
-  // Сброс полей после оплаты
   cardName.value = ''
   cardNumber.value = ''
   expiry.value = ''
