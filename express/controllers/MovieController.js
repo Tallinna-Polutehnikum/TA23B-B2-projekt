@@ -12,8 +12,8 @@ let movies = [
 
 const validFields = {"title": "string","description":"string","durationMin":"number","basePrice":"number"}
 
-router.get('/', function (req, res) {
-    res.json(movies);
+router.get('/', async function (req, res) {
+    res.json(await prisma.movie.findMany());
 });
 
 router.get('/:id', function (req, res) {
