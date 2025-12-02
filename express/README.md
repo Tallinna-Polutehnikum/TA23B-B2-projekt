@@ -1,42 +1,27 @@
-# REST API Example with Express & Prisma Postgres
+# Generic Cinema backend :D
 
-This example shows how to implement a **REST API with TypeScript** using [Express](https://expressjs.com/), Prisma ORM and a [Prisma Postgres](https://www.prisma.io/postgres) database.
+
 
 ## Getting started
 
-### 1. Download example and navigate into the project directory
-
-Download this example:
-
-```terminal
-npx try-prisma@latest --template orm/express --install npm --name express
-```
-
-Then, navigate into the project directory:
+### 1. Install npm dependencies:
 
 ```terminal
 cd express
-```
+npm install
 
-<details><summary><strong>Alternative:</strong> Clone the entire repo</summary>
-
-Clone this repository:
-
-```terminal
-git clone git@github.com:prisma/prisma-examples.git --depth=1
-```
-
-Install npm dependencies:
-
-```terminal
-cd prisma-examples/orm/express
+cd ../frontend
 npm install
 ```
 
-</details>
+Maybe in Powershell you need to run:
+```
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
 ### 2. Create and seed the database
 
+We are using MySQL,   NEEDS TO BE UPDATED
 Create a new [Prisma Postgres](https://www.prisma.io/docs/postgres/overview) database by executing:
 
 ```terminal
