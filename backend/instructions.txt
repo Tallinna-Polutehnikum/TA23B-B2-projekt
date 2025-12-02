@@ -1,4 +1,0 @@
-скачай node.js
-открой cmd npm i
-скачать open server panel (он создаёт бд)
-запуск server.js через cmd, open server panel отдельно тогда бэкенд запуститься 
