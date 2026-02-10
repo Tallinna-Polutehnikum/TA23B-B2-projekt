@@ -19,93 +19,29 @@ Maybe in Powershell you need to run:
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-### 2. Create and seed the database
+### 2. Create and seed the database (first time only)
 
-We are using MySQL,   NEEDS TO BE UPDATED
-Create a new [Prisma Postgres](https://www.prisma.io/docs/postgres/overview) database by executing:
+We are using MySQL or MariaDB
 
-```terminal
-npx prisma init --db
+```bash
+cp .env.template .env
 ```
 
-If you don't have a [Prisma Data Platform](https://console.prisma.io/) account yet, or if you are not logged in, the command will prompt you to log in using one of the available authentication providers. A browser window will open so you can log in or create an account. Return to the CLI after you have completed this step.
+Update DATABASE_URL
 
-Once logged in (or if you were already logged in), the CLI will prompt you to:
-1. Select a **region** (e.g. `us-east-1`)
-1. Enter a **project name**
-
-After successful creation, you will see output similar to the following:
-
-<details>
-
-<summary>CLI output</summary>
+And then run migration to create tables
 
 ```terminal
-Let's set up your Prisma Postgres database!
-? Select your region: ap-northeast-1 - Asia Pacific (Tokyo)
-? Enter a project name: testing-migration
-✔ Success! Your Prisma Postgres database is ready ✅
-
-We found an existing schema.prisma file in your current project directory.
-
---- Database URL ---
-
-Connect Prisma ORM to your Prisma Postgres database with this URL:
-
-prisma+postgres://accelerate.prisma-data.net/?api_key=ey...
-
---- Next steps ---
-
-Go to https://pris.ly/ppg-init for detailed instructions.
-
-1. Install and use the Prisma Accelerate extension
-Prisma Postgres requires the Prisma Accelerate extension for querying. If you haven't already installed it, install it in your project:
-npm install @prisma/extension-accelerate
-
-...and add it to your Prisma Client instance:
-import { withAccelerate } from "@prisma/extension-accelerate"
-
-const prisma = new PrismaClient().$extends(withAccelerate())
-
-2. Apply migrations
-Run the following command to create and apply a migration:
 npx prisma migrate dev
-
-3. Manage your data
-View and edit your data locally by running this command:
-npx prisma studio
-
-...or online in Console:
-https://console.prisma.io/{workspaceId}/{projectId}/studio
-
-4. Send queries from your app
-If you already have an existing app with Prisma ORM, you can now run it and it will send queries against your newly created Prisma Postgres instance.
-
-5. Learn more
-For more info, visit the Prisma Postgres docs: https://pris.ly/ppg-docs
 ```
 
-</details>
 
-Locate and copy the database URL provided in the CLI output. Then, create a `.env` file in the project root:
-
-```bash
-touch .env
-```
-
-Now, paste the URL into it as a value for the `DATABASE_URL` environment variable. For example:
-
-```bash
-# .env
-DATABASE_URL=prisma+postgres://accelerate.prisma-data.net/?api_key=ey...
-```
-
-Run the following command to create tables in your database. This creates the `User` and `Post` tables that are defined in [`prisma/schema.prisma`](./prisma/schema.prisma):
-
+### Database changes
 ```terminal
 npx prisma migrate dev --name init
 ```
 
+### Seed (tuleb teha)
 Execute the seed file in [`prisma/seed.ts`](./prisma/seed.ts) to populate your database with some sample data, by running:
 
 ```terminal

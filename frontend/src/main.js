@@ -16,6 +16,8 @@ import { createApp } from 'vue'
 // Styles
 import 'unfonts.css'
 
+export const API_URL = "http://localhost:3001";
+
 const app = createApp(App)
 
 registerPlugins(app)

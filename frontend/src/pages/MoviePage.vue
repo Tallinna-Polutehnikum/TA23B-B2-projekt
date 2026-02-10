@@ -15,8 +15,8 @@
         <h2>Трейлер</h2>
         <div class="video-wrapper">
           <iframe
-            v-if="movie.trailer.search(/youtube/) !== -1"
-            :src="movie.trailer"
+            v-if="movie?.trailer?.search(/youtube/) !== -1"
+            :src="movie?.trailer"
             frameborder="0"
             allowfullscreen
           ></iframe>
@@ -30,9 +30,9 @@
       
       <div class="details">
         <h3>Информация о фильме</h3>
-        <p><strong>Жанр:</strong> {{ movie.genre }}</p>
-        <p><strong>Длительность:</strong> {{ movie.length }}</p>
-        <p><strong>Язык:</strong> {{ movie.language }}</p>
+        <p><strong>Жанр:</strong> {{ movie?.genre }}</p>
+        <p><strong>Длительность:</strong> {{ movie?.length }}</p>
+        <p><strong>Язык:</strong> {{ movie?.language }}</p>
         <p><strong>Описание:</strong></p>
         <p>{{ movie.description }}</p>
 
@@ -50,13 +50,15 @@
 </template>
 
 <script setup>
+import { API_URL } from '@/main'
 import { ref, onBeforeMount } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const movieId = route.params.id
 
-const movies = [
+
+let movies = [
   {
     id: 1,
     title: 'Pogenev mees',
@@ -82,6 +84,8 @@ const movies = [
   },
   
 ]
+
+movies = await fetch(`${API_URL}/movies`).then(r => r.json())
 
 const movie = ref({})
 

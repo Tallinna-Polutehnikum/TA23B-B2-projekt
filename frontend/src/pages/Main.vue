@@ -9,9 +9,9 @@
         
         <div class="info">
           <h2>{{ movie.title }}</h2>
-          <p><strong>Жанр:</strong> {{ movie.genre }}</p>
-          <p><strong>Длительность:</strong> {{ movie.length }}</p>
-          <p>{{ movie.description.substring(0, 120) }}...</p>
+          <p><strong>Жанр:</strong> {{ movie?.genre }}</p>
+          <p><strong>Длительность:</strong> {{ movie.durationMin }}</p>
+          <p>{{ movie?.description?.substring(0, 120) }}...</p>
 
           <router-link :to="`/movie/${movie.id}`">
             <button class="btn">Подробнее →</button>
@@ -23,7 +23,9 @@
 </template>
 
 <script setup>
-const movies = [
+import { API_URL } from '@/main';
+
+let movies = [
   {
     id: 1,
     title: 'Põgenev mees',
@@ -65,6 +67,8 @@ const movies = [
     description: 'Описание фильма 5'
   }
 ]
+
+movies = await fetch(`${API_URL}/movies`).then(r => r.json())
 </script>
 
 <style scoped>

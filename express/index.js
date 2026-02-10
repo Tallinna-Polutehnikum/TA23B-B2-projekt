@@ -1,11 +1,23 @@
 import 'dotenv/config'
 import express from 'express'
+import cors from 'cors'
 import { PrismaMariaDb } from '@prisma/adapter-mariadb';
 import MovieController from './controllers/MovieController.js';
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 
 app.use(express.json());
+app.use(cors())
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname+"/index.html");
+});
 
 app.use('/movies', MovieController);
 
