@@ -1,6 +1,6 @@
 <template>
   <div class="main-page">
-    <h1>Афиша фильмов</h1>
+    <h1>Filmi plakat</h1>
     <div class="movie-list">
       <div class="movie-item" v-for="movie in movies" :key="movie.id">
         
@@ -9,12 +9,12 @@
         
         <div class="info">
           <h2>{{ movie.title }}</h2>
-          <p><strong>Жанр:</strong> {{ movie?.genre }}</p>
-          <p><strong>Длительность:</strong> {{ movie.durationMin }}</p>
+          <p><strong>Žanr:</strong> {{ movie?.genre }}</p>
+          <p><strong>Kestus:</strong> {{ movie.durationMin }}</p>
           <p>{{ movie?.description?.substring(0, 120) }}...</p>
 
           <router-link :to="`/movie/${movie.id}`">
-            <button class="btn">Подробнее →</button>
+            <button class="btn">Rohkem infot →</button>
           </router-link>
         </div>
       </div>
@@ -38,33 +38,33 @@ let movies = [
     id: 2,
     title: 'The Glassworker',
     length: '1h 30min',
-    genre: 'Анимация, Драма',
+    genre: 'Animatsioon, Draama',
     posterSmall: '/src/assets/poster2.jpg',
-    description: 'Описание фильма The Glassworker'
+    description: 'Filmi kirjeldus The Glassworker'
   },
   {
     id: 3,
-    title: 'Фильм 3',
+    title: 'Film 3',
     length: '1h 45min',
-    genre: 'Боевик',
+    genre: 'Õudusfilm',
     posterSmall: '/src/assets/poster3.jpg',
-    description: 'Описание фильма 3'
+    description: 'Filmi kirjeldus 3'
   },
   {
     id: 4,
-    title: 'Фильм 4',
+    title: 'Film 4',
     length: '2h 00min',
-    genre: 'Фантастика',
+    genre: 'Ulme',
     posterSmall: '/src/assets/poster4.jpg',
-    description: 'Описание фильма 4'
+    description: 'Filmi kirjeldus 4'
   },
   {
     id: 5,
-    title: 'Фильм 5',
+    title: 'Film 5',
     length: '1h 50min',
-    genre: 'Комедия',
+    genre: 'Koomika',
     posterSmall: '/src/assets/poster5.jpg',
-    description: 'Описание фильма 5'
+    description: 'Filmi kirjeldus 5'
   }
 ]
 
