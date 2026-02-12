@@ -1,6 +1,6 @@
 # Generic Cinema backend :D
 
-
+npx prisma studio
 
 ## Getting started
 
