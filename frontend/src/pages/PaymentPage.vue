@@ -1,24 +1,24 @@
 <template>
   <div class="payment-page">
     <div class="payment-container">
-      <h1>Оплата билета</h1>
+      <h1>Pileti maksmine</h1>
 
       <div v-if="movie" class="content">
         <div class="booking-info">
-          <p><strong>Фильм:</strong> {{ movie.title }}</p>
-          <p><strong>Время:</strong> {{ time }}</p>
-          <p><strong>Места:</strong> {{ seats.join(', ') }}</p>
+          <p><strong>Film:</strong> {{ movie.title }}</p>
+          <p><strong>Aeg:</strong> {{ time }}</p>
+          <p><strong>Kohad:</strong> {{ seats.join(', ') }}</p>
         </div>
 
-        <h2>Информация о платеже</h2>
+        <h2>Makseinfo</h2>
         <form @submit.prevent="payTicket" class="payment-form">
           <div class="form-group">
-            <label for="cardName">Имя на карте</label>
-            <input id="cardName" v-model="cardName" type="text" required placeholder="Иван Иванов">
+            <label for="cardName">Nimi kaardil</label>
+            <input id="cardName" v-model="cardName" type="text" required placeholder="Mati Maasikas">
           </div>
 
           <div class="form-group">
-            <label for="cardNumber">Номер карты</label>
+            <label for="cardNumber">Kaardi number</label>
             <input id="cardNumber" v-model="cardNumber" type="text" required maxlength="16" placeholder="1234 5678 9012 3456">
           </div>
 
@@ -33,16 +33,16 @@
          </div>
         </div>
           <div class="form-group">
-            <label for="email">Email для подтверждения</label>
+            <label for="email">E-post kinnituseks</label>
             <input id="email" v-model="email" type="email" required placeholder="example@mail.com">
           </div>
 
-          <button type="submit" class="btn">Оплатить</button>
+          <button type="submit" class="btn">Maksa</button>
         </form>
       </div>
 
       <div v-else>
-        <p>Данные о бронировании отсутствуют.</p>
+        <p>Broneeringu andmeid ei leitud.</p>
       </div>
     </div>
   </div>
@@ -75,11 +75,11 @@ onMounted(() => {
 
 function payTicket() {
   if (!cardName.value || !cardNumber.value || !expiry.value || !cvv.value || !email.value) {
-    alert('Пожалуйста, заполните все поля оплаты.')
+    alert('Palun täida kõik makseväljad.')
     return
   }
 
-  alert(`Оплата билета на "${movie.value.title}" успешно произведена!\nМеста: ${seats.join(', ')}\nПодтверждение отправлено на ${email.value}`)
+  alert(`Pileti makse filmile "${movie.value.title}" õnnestus!\nKohad: ${seats.join(', ')}\nKinnitus saadeti aadressile ${email.value}`)
 
   cardName.value = ''
   cardNumber.value = ''

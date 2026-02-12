@@ -1,27 +1,13 @@
-import { PrismaMariaDb } from '@prisma/adapter-mariadb';
-import { PrismaClient } from './generated/prisma/client.js';
-import 'dotenv/config'
+import { PrismaBetterSqlite3 } from '@prisma/adapter-better-sqlite3';
+import pkg from '@prisma/client';
 
-function parseMysqlUrl(url) {
-    const regex = /^mysql:\/\/([^:]+):([^@]+)@([^:\/]+):(\d+)\/(.+)$/;
+const { PrismaClient } = pkg;
 
-    const match = url.match(regex);
-    if (!match) {
-        throw new Error("Invalid MySQL connection string: " + url);
-    }
-
-    return {
-        host: match[3],
-        port: parseInt(match[4], 10),
-        user: match[1],
-        password: match[2],
-        database: match[5]
-    };
-}
-
-const adapter = new PrismaMariaDb({
-    ...parseMysqlUrl(process.env.DATABASE_URL),
-    connectionLimit: 5
+// Адаптер для SQLite, использует тот же файл, что и prisma.config.ts
+const adapter = new PrismaBetterSqlite3({
+  url: 'file:./dev.db',
 });
+
 const prisma = new PrismaClient({ adapter });
+
 export default prisma;

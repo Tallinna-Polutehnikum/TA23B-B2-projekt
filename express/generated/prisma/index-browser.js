@@ -114,9 +114,6 @@ Prisma.NullTypes = NullTypes
  */
 
 exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
-  ReadUncommitted: 'ReadUncommitted',
-  ReadCommitted: 'ReadCommitted',
-  RepeatableRead: 'RepeatableRead',
   Serializable: 'Serializable'
 });
 
@@ -132,7 +129,13 @@ exports.Prisma.MovieScalarFieldEnum = {
   title: 'title',
   description: 'description',
   durationMin: 'durationMin',
-  basePrice: 'basePrice'
+  basePrice: 'basePrice',
+  posterSmall: 'posterSmall',
+  banner: 'banner',
+  trailer: 'trailer',
+  genre: 'genre',
+  length: 'length',
+  language: 'language'
 };
 
 exports.Prisma.GenreScalarFieldEnum = {
@@ -198,39 +201,6 @@ exports.Prisma.SortOrder = {
 exports.Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
-};
-
-exports.Prisma.UserOrderByRelevanceFieldEnum = {
-  id: 'id',
-  email: 'email',
-  name: 'name'
-};
-
-exports.Prisma.MovieOrderByRelevanceFieldEnum = {
-  title: 'title',
-  description: 'description'
-};
-
-exports.Prisma.GenreOrderByRelevanceFieldEnum = {
-  name: 'name'
-};
-
-exports.Prisma.CinemaOrderByRelevanceFieldEnum = {
-  name: 'name',
-  location: 'location'
-};
-
-exports.Prisma.RoomOrderByRelevanceFieldEnum = {
-  name: 'name'
-};
-
-exports.Prisma.SeatOrderByRelevanceFieldEnum = {
-  row: 'row'
-};
-
-exports.Prisma.TicketOrderByRelevanceFieldEnum = {
-  publicId: 'publicId',
-  userId: 'userId'
 };
 exports.SeatType = exports.$Enums.SeatType = {
   STANDARD: 'STANDARD',

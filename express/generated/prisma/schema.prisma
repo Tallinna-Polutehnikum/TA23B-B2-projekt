@@ -5,8 +5,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  //url      = env("DATABASE_URL")
+  provider = "sqlite"
 }
 
 // -----------------------------
@@ -43,7 +42,13 @@ model Movie {
   title       String
   description String?
   durationMin Int
-  basePrice   Decimal      @db.Decimal(10, 2)
+  basePrice   Decimal
+  posterSmall String?
+  banner      String?
+  trailer     String?
+  genre       String?
+  length      String?
+  language    String?
   genres      MovieGenre[]
   showtimes   Showtime[]
 }
@@ -90,7 +95,7 @@ model Seat {
   row             String
   number          Int
   type            SeatType
-  priceMultiplier Decimal  @db.Decimal(5, 2)
+  priceMultiplier Decimal
 
   room       Room         @relation(fields: [roomId], references: [id])
   TicketSeat TicketSeat[]
@@ -106,7 +111,7 @@ model Showtime {
   movieId        Int
   roomId         Int
   startsAt       DateTime
-  seatMultiplier Decimal  @db.Decimal(5, 2)
+  seatMultiplier Decimal
 
   movie Movie @relation(fields: [movieId], references: [id])
   room  Room  @relation(fields: [roomId], references: [id])
@@ -124,7 +129,7 @@ model Ticket {
   showtimeId BigInt
   status     TicketStatus @default(PENDING)
   paidAt     DateTime?
-  totalPrice Decimal      @db.Decimal(10, 2)
+  totalPrice Decimal
   createdAt  DateTime     @default(now())
 
   user     User     @relation(fields: [userId], references: [id])

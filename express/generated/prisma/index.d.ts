@@ -806,6 +806,10 @@ export namespace Prisma {
             args: Prisma.UserCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.UserCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
+          }
           delete: {
             args: Prisma.UserDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$UserPayload>
@@ -821,6 +825,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.UserUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.UserUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           upsert: {
             args: Prisma.UserUpsertArgs<ExtArgs>
@@ -872,6 +880,10 @@ export namespace Prisma {
             args: Prisma.MovieCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.MovieCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MoviePayload>[]
+          }
           delete: {
             args: Prisma.MovieDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$MoviePayload>
@@ -887,6 +899,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.MovieUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.MovieUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MoviePayload>[]
           }
           upsert: {
             args: Prisma.MovieUpsertArgs<ExtArgs>
@@ -938,6 +954,10 @@ export namespace Prisma {
             args: Prisma.GenreCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.GenreCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GenrePayload>[]
+          }
           delete: {
             args: Prisma.GenreDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$GenrePayload>
@@ -953,6 +973,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.GenreUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.GenreUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GenrePayload>[]
           }
           upsert: {
             args: Prisma.GenreUpsertArgs<ExtArgs>
@@ -1004,6 +1028,10 @@ export namespace Prisma {
             args: Prisma.MovieGenreCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.MovieGenreCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>[]
+          }
           delete: {
             args: Prisma.MovieGenreDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>
@@ -1019,6 +1047,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.MovieGenreUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.MovieGenreUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>[]
           }
           upsert: {
             args: Prisma.MovieGenreUpsertArgs<ExtArgs>
@@ -1070,6 +1102,10 @@ export namespace Prisma {
             args: Prisma.CinemaCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.CinemaCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CinemaPayload>[]
+          }
           delete: {
             args: Prisma.CinemaDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$CinemaPayload>
@@ -1085,6 +1121,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.CinemaUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.CinemaUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CinemaPayload>[]
           }
           upsert: {
             args: Prisma.CinemaUpsertArgs<ExtArgs>
@@ -1136,6 +1176,10 @@ export namespace Prisma {
             args: Prisma.RoomCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.RoomCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RoomPayload>[]
+          }
           delete: {
             args: Prisma.RoomDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$RoomPayload>
@@ -1151,6 +1195,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.RoomUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.RoomUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RoomPayload>[]
           }
           upsert: {
             args: Prisma.RoomUpsertArgs<ExtArgs>
@@ -1202,6 +1250,10 @@ export namespace Prisma {
             args: Prisma.SeatCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.SeatCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SeatPayload>[]
+          }
           delete: {
             args: Prisma.SeatDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$SeatPayload>
@@ -1217,6 +1269,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.SeatUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.SeatUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SeatPayload>[]
           }
           upsert: {
             args: Prisma.SeatUpsertArgs<ExtArgs>
@@ -1268,6 +1324,10 @@ export namespace Prisma {
             args: Prisma.ShowtimeCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.ShowtimeCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ShowtimePayload>[]
+          }
           delete: {
             args: Prisma.ShowtimeDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$ShowtimePayload>
@@ -1283,6 +1343,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.ShowtimeUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ShowtimeUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ShowtimePayload>[]
           }
           upsert: {
             args: Prisma.ShowtimeUpsertArgs<ExtArgs>
@@ -1334,6 +1398,10 @@ export namespace Prisma {
             args: Prisma.TicketCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.TicketCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TicketPayload>[]
+          }
           delete: {
             args: Prisma.TicketDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$TicketPayload>
@@ -1349,6 +1417,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.TicketUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.TicketUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TicketPayload>[]
           }
           upsert: {
             args: Prisma.TicketUpsertArgs<ExtArgs>
@@ -1400,6 +1472,10 @@ export namespace Prisma {
             args: Prisma.TicketSeatCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
+          createManyAndReturn: {
+            args: Prisma.TicketSeatCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TicketSeatPayload>[]
+          }
           delete: {
             args: Prisma.TicketSeatDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$TicketSeatPayload>
@@ -1415,6 +1491,10 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.TicketSeatUpdateManyArgs<ExtArgs>
             result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.TicketSeatUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TicketSeatPayload>[]
           }
           upsert: {
             args: Prisma.TicketSeatUpsertArgs<ExtArgs>
@@ -2041,7 +2121,19 @@ export namespace Prisma {
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
+  export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["user"]>
 
+  export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
     id?: boolean
@@ -2055,6 +2147,8 @@ export namespace Prisma {
     tickets?: boolean | User$ticketsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
+  export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type UserIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
@@ -2184,6 +2278,30 @@ export namespace Prisma {
     createMany<T extends UserCreateManyArgs>(args?: SelectSubset<T, UserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Users and returns the data saved in the database.
+     * @param {UserCreateManyAndReturnArgs} args - Arguments to create many Users.
+     * @example
+     * // Create many Users
+     * const user = await prisma.user.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Users and only return the `id`
+     * const userWithIdOnly = await prisma.user.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends UserCreateManyAndReturnArgs>(args?: SelectSubset<T, UserCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a User.
      * @param {UserDeleteArgs} args - Arguments to delete one User.
      * @example
@@ -2246,6 +2364,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends UserUpdateManyArgs>(args: SelectSubset<T, UserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Users and returns the data updated in the database.
+     * @param {UserUpdateManyAndReturnArgs} args - Arguments to update many Users.
+     * @example
+     * // Update many Users
+     * const user = await prisma.user.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Users and only return the `id`
+     * const userWithIdOnly = await prisma.user.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends UserUpdateManyAndReturnArgs>(args: SelectSubset<T, UserUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one User.
@@ -2669,7 +2817,24 @@ export namespace Prisma {
      * The data used to create many Users.
      */
     data: UserCreateManyInput | UserCreateManyInput[]
-    skipDuplicates?: boolean
+  }
+
+  /**
+   * User createManyAndReturn
+   */
+  export type UserCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the User
+     */
+    select?: UserSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the User
+     */
+    omit?: UserOmit<ExtArgs> | null
+    /**
+     * The data used to create many Users.
+     */
+    data: UserCreateManyInput | UserCreateManyInput[]
   }
 
   /**
@@ -2702,6 +2867,32 @@ export namespace Prisma {
    * User updateMany
    */
   export type UserUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Users.
+     */
+    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
+    /**
+     * Filter which Users to update
+     */
+    where?: UserWhereInput
+    /**
+     * Limit how many Users to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * User updateManyAndReturn
+   */
+  export type UserUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the User
+     */
+    select?: UserSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the User
+     */
+    omit?: UserOmit<ExtArgs> | null
     /**
      * The data used to update Users.
      */
@@ -2855,6 +3046,12 @@ export namespace Prisma {
     description: string | null
     durationMin: number | null
     basePrice: Decimal | null
+    posterSmall: string | null
+    banner: string | null
+    trailer: string | null
+    genre: string | null
+    length: string | null
+    language: string | null
   }
 
   export type MovieMaxAggregateOutputType = {
@@ -2863,6 +3060,12 @@ export namespace Prisma {
     description: string | null
     durationMin: number | null
     basePrice: Decimal | null
+    posterSmall: string | null
+    banner: string | null
+    trailer: string | null
+    genre: string | null
+    length: string | null
+    language: string | null
   }
 
   export type MovieCountAggregateOutputType = {
@@ -2871,6 +3074,12 @@ export namespace Prisma {
     description: number
     durationMin: number
     basePrice: number
+    posterSmall: number
+    banner: number
+    trailer: number
+    genre: number
+    length: number
+    language: number
     _all: number
   }
 
@@ -2893,6 +3102,12 @@ export namespace Prisma {
     description?: true
     durationMin?: true
     basePrice?: true
+    posterSmall?: true
+    banner?: true
+    trailer?: true
+    genre?: true
+    length?: true
+    language?: true
   }
 
   export type MovieMaxAggregateInputType = {
@@ -2901,6 +3116,12 @@ export namespace Prisma {
     description?: true
     durationMin?: true
     basePrice?: true
+    posterSmall?: true
+    banner?: true
+    trailer?: true
+    genre?: true
+    length?: true
+    language?: true
   }
 
   export type MovieCountAggregateInputType = {
@@ -2909,6 +3130,12 @@ export namespace Prisma {
     description?: true
     durationMin?: true
     basePrice?: true
+    posterSmall?: true
+    banner?: true
+    trailer?: true
+    genre?: true
+    length?: true
+    language?: true
     _all?: true
   }
 
@@ -3004,6 +3231,12 @@ export namespace Prisma {
     description: string | null
     durationMin: number
     basePrice: Decimal
+    posterSmall: string | null
+    banner: string | null
+    trailer: string | null
+    genre: string | null
+    length: string | null
+    language: string | null
     _count: MovieCountAggregateOutputType | null
     _avg: MovieAvgAggregateOutputType | null
     _sum: MovieSumAggregateOutputType | null
@@ -3031,12 +3264,44 @@ export namespace Prisma {
     description?: boolean
     durationMin?: boolean
     basePrice?: boolean
+    posterSmall?: boolean
+    banner?: boolean
+    trailer?: boolean
+    genre?: boolean
+    length?: boolean
+    language?: boolean
     genres?: boolean | Movie$genresArgs<ExtArgs>
     showtimes?: boolean | Movie$showtimesArgs<ExtArgs>
     _count?: boolean | MovieCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["movie"]>
 
+  export type MovieSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    description?: boolean
+    durationMin?: boolean
+    basePrice?: boolean
+    posterSmall?: boolean
+    banner?: boolean
+    trailer?: boolean
+    genre?: boolean
+    length?: boolean
+    language?: boolean
+  }, ExtArgs["result"]["movie"]>
 
+  export type MovieSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    description?: boolean
+    durationMin?: boolean
+    basePrice?: boolean
+    posterSmall?: boolean
+    banner?: boolean
+    trailer?: boolean
+    genre?: boolean
+    length?: boolean
+    language?: boolean
+  }, ExtArgs["result"]["movie"]>
 
   export type MovieSelectScalar = {
     id?: boolean
@@ -3044,14 +3309,22 @@ export namespace Prisma {
     description?: boolean
     durationMin?: boolean
     basePrice?: boolean
+    posterSmall?: boolean
+    banner?: boolean
+    trailer?: boolean
+    genre?: boolean
+    length?: boolean
+    language?: boolean
   }
 
-  export type MovieOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "durationMin" | "basePrice", ExtArgs["result"]["movie"]>
+  export type MovieOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "durationMin" | "basePrice" | "posterSmall" | "banner" | "trailer" | "genre" | "length" | "language", ExtArgs["result"]["movie"]>
   export type MovieInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     genres?: boolean | Movie$genresArgs<ExtArgs>
     showtimes?: boolean | Movie$showtimesArgs<ExtArgs>
     _count?: boolean | MovieCountOutputTypeDefaultArgs<ExtArgs>
   }
+  export type MovieIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type MovieIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $MoviePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Movie"
@@ -3065,6 +3338,12 @@ export namespace Prisma {
       description: string | null
       durationMin: number
       basePrice: Prisma.Decimal
+      posterSmall: string | null
+      banner: string | null
+      trailer: string | null
+      genre: string | null
+      length: string | null
+      language: string | null
     }, ExtArgs["result"]["movie"]>
     composites: {}
   }
@@ -3183,6 +3462,30 @@ export namespace Prisma {
     createMany<T extends MovieCreateManyArgs>(args?: SelectSubset<T, MovieCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Movies and returns the data saved in the database.
+     * @param {MovieCreateManyAndReturnArgs} args - Arguments to create many Movies.
+     * @example
+     * // Create many Movies
+     * const movie = await prisma.movie.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Movies and only return the `id`
+     * const movieWithIdOnly = await prisma.movie.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends MovieCreateManyAndReturnArgs>(args?: SelectSubset<T, MovieCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Movie.
      * @param {MovieDeleteArgs} args - Arguments to delete one Movie.
      * @example
@@ -3245,6 +3548,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends MovieUpdateManyArgs>(args: SelectSubset<T, MovieUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Movies and returns the data updated in the database.
+     * @param {MovieUpdateManyAndReturnArgs} args - Arguments to update many Movies.
+     * @example
+     * // Update many Movies
+     * const movie = await prisma.movie.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Movies and only return the `id`
+     * const movieWithIdOnly = await prisma.movie.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends MovieUpdateManyAndReturnArgs>(args: SelectSubset<T, MovieUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Movie.
@@ -3441,6 +3774,12 @@ export namespace Prisma {
     readonly description: FieldRef<"Movie", 'String'>
     readonly durationMin: FieldRef<"Movie", 'Int'>
     readonly basePrice: FieldRef<"Movie", 'Decimal'>
+    readonly posterSmall: FieldRef<"Movie", 'String'>
+    readonly banner: FieldRef<"Movie", 'String'>
+    readonly trailer: FieldRef<"Movie", 'String'>
+    readonly genre: FieldRef<"Movie", 'String'>
+    readonly length: FieldRef<"Movie", 'String'>
+    readonly language: FieldRef<"Movie", 'String'>
   }
     
 
@@ -3670,7 +4009,24 @@ export namespace Prisma {
      * The data used to create many Movies.
      */
     data: MovieCreateManyInput | MovieCreateManyInput[]
-    skipDuplicates?: boolean
+  }
+
+  /**
+   * Movie createManyAndReturn
+   */
+  export type MovieCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Movie
+     */
+    select?: MovieSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Movie
+     */
+    omit?: MovieOmit<ExtArgs> | null
+    /**
+     * The data used to create many Movies.
+     */
+    data: MovieCreateManyInput | MovieCreateManyInput[]
   }
 
   /**
@@ -3703,6 +4059,32 @@ export namespace Prisma {
    * Movie updateMany
    */
   export type MovieUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Movies.
+     */
+    data: XOR<MovieUpdateManyMutationInput, MovieUncheckedUpdateManyInput>
+    /**
+     * Filter which Movies to update
+     */
+    where?: MovieWhereInput
+    /**
+     * Limit how many Movies to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Movie updateManyAndReturn
+   */
+  export type MovieUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Movie
+     */
+    select?: MovieSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Movie
+     */
+    omit?: MovieOmit<ExtArgs> | null
     /**
      * The data used to update Movies.
      */
@@ -4028,7 +4410,15 @@ export namespace Prisma {
     _count?: boolean | GenreCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["genre"]>
 
+  export type GenreSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+  }, ExtArgs["result"]["genre"]>
 
+  export type GenreSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+  }, ExtArgs["result"]["genre"]>
 
   export type GenreSelectScalar = {
     id?: boolean
@@ -4040,6 +4430,8 @@ export namespace Prisma {
     movies?: boolean | Genre$moviesArgs<ExtArgs>
     _count?: boolean | GenreCountOutputTypeDefaultArgs<ExtArgs>
   }
+  export type GenreIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type GenreIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $GenrePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Genre"
@@ -4167,6 +4559,30 @@ export namespace Prisma {
     createMany<T extends GenreCreateManyArgs>(args?: SelectSubset<T, GenreCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Genres and returns the data saved in the database.
+     * @param {GenreCreateManyAndReturnArgs} args - Arguments to create many Genres.
+     * @example
+     * // Create many Genres
+     * const genre = await prisma.genre.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Genres and only return the `id`
+     * const genreWithIdOnly = await prisma.genre.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends GenreCreateManyAndReturnArgs>(args?: SelectSubset<T, GenreCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Genre.
      * @param {GenreDeleteArgs} args - Arguments to delete one Genre.
      * @example
@@ -4229,6 +4645,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends GenreUpdateManyArgs>(args: SelectSubset<T, GenreUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Genres and returns the data updated in the database.
+     * @param {GenreUpdateManyAndReturnArgs} args - Arguments to update many Genres.
+     * @example
+     * // Update many Genres
+     * const genre = await prisma.genre.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Genres and only return the `id`
+     * const genreWithIdOnly = await prisma.genre.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends GenreUpdateManyAndReturnArgs>(args: SelectSubset<T, GenreUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Genre.
@@ -4650,7 +5096,24 @@ export namespace Prisma {
      * The data used to create many Genres.
      */
     data: GenreCreateManyInput | GenreCreateManyInput[]
-    skipDuplicates?: boolean
+  }
+
+  /**
+   * Genre createManyAndReturn
+   */
+  export type GenreCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Genre
+     */
+    select?: GenreSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Genre
+     */
+    omit?: GenreOmit<ExtArgs> | null
+    /**
+     * The data used to create many Genres.
+     */
+    data: GenreCreateManyInput | GenreCreateManyInput[]
   }
 
   /**
@@ -4683,6 +5146,32 @@ export namespace Prisma {
    * Genre updateMany
    */
   export type GenreUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Genres.
+     */
+    data: XOR<GenreUpdateManyMutationInput, GenreUncheckedUpdateManyInput>
+    /**
+     * Filter which Genres to update
+     */
+    where?: GenreWhereInput
+    /**
+     * Limit how many Genres to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Genre updateManyAndReturn
+   */
+  export type GenreUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Genre
+     */
+    select?: GenreSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Genre
+     */
+    omit?: GenreOmit<ExtArgs> | null
     /**
      * The data used to update Genres.
      */
@@ -4988,7 +5477,19 @@ export namespace Prisma {
     genre?: boolean | GenreDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["movieGenre"]>
 
+  export type MovieGenreSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    movieId?: boolean
+    genreId?: boolean
+    movie?: boolean | MovieDefaultArgs<ExtArgs>
+    genre?: boolean | GenreDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["movieGenre"]>
 
+  export type MovieGenreSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    movieId?: boolean
+    genreId?: boolean
+    movie?: boolean | MovieDefaultArgs<ExtArgs>
+    genre?: boolean | GenreDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["movieGenre"]>
 
   export type MovieGenreSelectScalar = {
     movieId?: boolean
@@ -4997,6 +5498,14 @@ export namespace Prisma {
 
   export type MovieGenreOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"movieId" | "genreId", ExtArgs["result"]["movieGenre"]>
   export type MovieGenreInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    movie?: boolean | MovieDefaultArgs<ExtArgs>
+    genre?: boolean | GenreDefaultArgs<ExtArgs>
+  }
+  export type MovieGenreIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    movie?: boolean | MovieDefaultArgs<ExtArgs>
+    genre?: boolean | GenreDefaultArgs<ExtArgs>
+  }
+  export type MovieGenreIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     movie?: boolean | MovieDefaultArgs<ExtArgs>
     genre?: boolean | GenreDefaultArgs<ExtArgs>
   }
@@ -5128,6 +5637,30 @@ export namespace Prisma {
     createMany<T extends MovieGenreCreateManyArgs>(args?: SelectSubset<T, MovieGenreCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many MovieGenres and returns the data saved in the database.
+     * @param {MovieGenreCreateManyAndReturnArgs} args - Arguments to create many MovieGenres.
+     * @example
+     * // Create many MovieGenres
+     * const movieGenre = await prisma.movieGenre.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many MovieGenres and only return the `movieId`
+     * const movieGenreWithMovieIdOnly = await prisma.movieGenre.createManyAndReturn({
+     *   select: { movieId: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends MovieGenreCreateManyAndReturnArgs>(args?: SelectSubset<T, MovieGenreCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a MovieGenre.
      * @param {MovieGenreDeleteArgs} args - Arguments to delete one MovieGenre.
      * @example
@@ -5190,6 +5723,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends MovieGenreUpdateManyArgs>(args: SelectSubset<T, MovieGenreUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more MovieGenres and returns the data updated in the database.
+     * @param {MovieGenreUpdateManyAndReturnArgs} args - Arguments to update many MovieGenres.
+     * @example
+     * // Update many MovieGenres
+     * const movieGenre = await prisma.movieGenre.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more MovieGenres and only return the `movieId`
+     * const movieGenreWithMovieIdOnly = await prisma.movieGenre.updateManyAndReturn({
+     *   select: { movieId: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends MovieGenreUpdateManyAndReturnArgs>(args: SelectSubset<T, MovieGenreUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one MovieGenre.
@@ -5612,7 +6175,28 @@ export namespace Prisma {
      * The data used to create many MovieGenres.
      */
     data: MovieGenreCreateManyInput | MovieGenreCreateManyInput[]
-    skipDuplicates?: boolean
+  }
+
+  /**
+   * MovieGenre createManyAndReturn
+   */
+  export type MovieGenreCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MovieGenre
+     */
+    select?: MovieGenreSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the MovieGenre
+     */
+    omit?: MovieGenreOmit<ExtArgs> | null
+    /**
+     * The data used to create many MovieGenres.
+     */
+    data: MovieGenreCreateManyInput | MovieGenreCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MovieGenreIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -5657,6 +6241,36 @@ export namespace Prisma {
      * Limit how many MovieGenres to update.
      */
     limit?: number
+  }
+
+  /**
+   * MovieGenre updateManyAndReturn
+   */
+  export type MovieGenreUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MovieGenre
+     */
+    select?: MovieGenreSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the MovieGenre
+     */
+    omit?: MovieGenreOmit<ExtArgs> | null
+    /**
+     * The data used to update MovieGenres.
+     */
+    data: XOR<MovieGenreUpdateManyMutationInput, MovieGenreUncheckedUpdateManyInput>
+    /**
+     * Filter which MovieGenres to update
+     */
+    where?: MovieGenreWhereInput
+    /**
+     * Limit how many MovieGenres to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MovieGenreIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -5930,7 +6544,17 @@ export namespace Prisma {
     _count?: boolean | CinemaCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["cinema"]>
 
+  export type CinemaSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    location?: boolean
+  }, ExtArgs["result"]["cinema"]>
 
+  export type CinemaSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    location?: boolean
+  }, ExtArgs["result"]["cinema"]>
 
   export type CinemaSelectScalar = {
     id?: boolean
@@ -5943,6 +6567,8 @@ export namespace Prisma {
     rooms?: boolean | Cinema$roomsArgs<ExtArgs>
     _count?: boolean | CinemaCountOutputTypeDefaultArgs<ExtArgs>
   }
+  export type CinemaIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type CinemaIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $CinemaPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Cinema"
@@ -6071,6 +6697,30 @@ export namespace Prisma {
     createMany<T extends CinemaCreateManyArgs>(args?: SelectSubset<T, CinemaCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Cinemas and returns the data saved in the database.
+     * @param {CinemaCreateManyAndReturnArgs} args - Arguments to create many Cinemas.
+     * @example
+     * // Create many Cinemas
+     * const cinema = await prisma.cinema.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Cinemas and only return the `id`
+     * const cinemaWithIdOnly = await prisma.cinema.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends CinemaCreateManyAndReturnArgs>(args?: SelectSubset<T, CinemaCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CinemaPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Cinema.
      * @param {CinemaDeleteArgs} args - Arguments to delete one Cinema.
      * @example
@@ -6133,6 +6783,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends CinemaUpdateManyArgs>(args: SelectSubset<T, CinemaUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Cinemas and returns the data updated in the database.
+     * @param {CinemaUpdateManyAndReturnArgs} args - Arguments to update many Cinemas.
+     * @example
+     * // Update many Cinemas
+     * const cinema = await prisma.cinema.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Cinemas and only return the `id`
+     * const cinemaWithIdOnly = await prisma.cinema.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends CinemaUpdateManyAndReturnArgs>(args: SelectSubset<T, CinemaUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CinemaPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Cinema.
@@ -6555,7 +7235,24 @@ export namespace Prisma {
      * The data used to create many Cinemas.
      */
     data: CinemaCreateManyInput | CinemaCreateManyInput[]
-    skipDuplicates?: boolean
+  }
+
+  /**
+   * Cinema createManyAndReturn
+   */
+  export type CinemaCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Cinema
+     */
+    select?: CinemaSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Cinema
+     */
+    omit?: CinemaOmit<ExtArgs> | null
+    /**
+     * The data used to create many Cinemas.
+     */
+    data: CinemaCreateManyInput | CinemaCreateManyInput[]
   }
 
   /**
@@ -6588,6 +7285,32 @@ export namespace Prisma {
    * Cinema updateMany
    */
   export type CinemaUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Cinemas.
+     */
+    data: XOR<CinemaUpdateManyMutationInput, CinemaUncheckedUpdateManyInput>
+    /**
+     * Filter which Cinemas to update
+     */
+    where?: CinemaWhereInput
+    /**
+     * Limit how many Cinemas to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Cinema updateManyAndReturn
+   */
+  export type CinemaUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Cinema
+     */
+    select?: CinemaSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Cinema
+     */
+    omit?: CinemaOmit<ExtArgs> | null
     /**
      * The data used to update Cinemas.
      */
@@ -6903,7 +7626,19 @@ export namespace Prisma {
     _count?: boolean | RoomCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["room"]>
 
+  export type RoomSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    cinemaId?: boolean
+    name?: boolean
+    cinema?: boolean | CinemaDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["room"]>
 
+  export type RoomSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    cinemaId?: boolean
+    name?: boolean
+    cinema?: boolean | CinemaDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["room"]>
 
   export type RoomSelectScalar = {
     id?: boolean
@@ -6917,6 +7652,12 @@ export namespace Prisma {
     seats?: boolean | Room$seatsArgs<ExtArgs>
     showtimes?: boolean | Room$showtimesArgs<ExtArgs>
     _count?: boolean | RoomCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type RoomIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    cinema?: boolean | CinemaDefaultArgs<ExtArgs>
+  }
+  export type RoomIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    cinema?: boolean | CinemaDefaultArgs<ExtArgs>
   }
 
   export type $RoomPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -7048,6 +7789,30 @@ export namespace Prisma {
     createMany<T extends RoomCreateManyArgs>(args?: SelectSubset<T, RoomCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Rooms and returns the data saved in the database.
+     * @param {RoomCreateManyAndReturnArgs} args - Arguments to create many Rooms.
+     * @example
+     * // Create many Rooms
+     * const room = await prisma.room.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Rooms and only return the `id`
+     * const roomWithIdOnly = await prisma.room.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends RoomCreateManyAndReturnArgs>(args?: SelectSubset<T, RoomCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$RoomPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Room.
      * @param {RoomDeleteArgs} args - Arguments to delete one Room.
      * @example
@@ -7110,6 +7875,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends RoomUpdateManyArgs>(args: SelectSubset<T, RoomUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Rooms and returns the data updated in the database.
+     * @param {RoomUpdateManyAndReturnArgs} args - Arguments to update many Rooms.
+     * @example
+     * // Update many Rooms
+     * const room = await prisma.room.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Rooms and only return the `id`
+     * const roomWithIdOnly = await prisma.room.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends RoomUpdateManyAndReturnArgs>(args: SelectSubset<T, RoomUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$RoomPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Room.
@@ -7534,7 +8329,28 @@ export namespace Prisma {
      * The data used to create many Rooms.
      */
     data: RoomCreateManyInput | RoomCreateManyInput[]
-    skipDuplicates?: boolean
+  }
+
+  /**
+   * Room createManyAndReturn
+   */
+  export type RoomCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Room
+     */
+    select?: RoomSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Room
+     */
+    omit?: RoomOmit<ExtArgs> | null
+    /**
+     * The data used to create many Rooms.
+     */
+    data: RoomCreateManyInput | RoomCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RoomIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -7579,6 +8395,36 @@ export namespace Prisma {
      * Limit how many Rooms to update.
      */
     limit?: number
+  }
+
+  /**
+   * Room updateManyAndReturn
+   */
+  export type RoomUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Room
+     */
+    select?: RoomSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Room
+     */
+    omit?: RoomOmit<ExtArgs> | null
+    /**
+     * The data used to update Rooms.
+     */
+    data: XOR<RoomUpdateManyMutationInput, RoomUncheckedUpdateManyInput>
+    /**
+     * Filter which Rooms to update
+     */
+    where?: RoomWhereInput
+    /**
+     * Limit how many Rooms to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RoomIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -7937,7 +8783,25 @@ export namespace Prisma {
     _count?: boolean | SeatCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["seat"]>
 
+  export type SeatSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    roomId?: boolean
+    row?: boolean
+    number?: boolean
+    type?: boolean
+    priceMultiplier?: boolean
+    room?: boolean | RoomDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["seat"]>
 
+  export type SeatSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    roomId?: boolean
+    row?: boolean
+    number?: boolean
+    type?: boolean
+    priceMultiplier?: boolean
+    room?: boolean | RoomDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["seat"]>
 
   export type SeatSelectScalar = {
     id?: boolean
@@ -7953,6 +8817,12 @@ export namespace Prisma {
     room?: boolean | RoomDefaultArgs<ExtArgs>
     TicketSeat?: boolean | Seat$TicketSeatArgs<ExtArgs>
     _count?: boolean | SeatCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type SeatIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    room?: boolean | RoomDefaultArgs<ExtArgs>
+  }
+  export type SeatIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    room?: boolean | RoomDefaultArgs<ExtArgs>
   }
 
   export type $SeatPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -8086,6 +8956,30 @@ export namespace Prisma {
     createMany<T extends SeatCreateManyArgs>(args?: SelectSubset<T, SeatCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Seats and returns the data saved in the database.
+     * @param {SeatCreateManyAndReturnArgs} args - Arguments to create many Seats.
+     * @example
+     * // Create many Seats
+     * const seat = await prisma.seat.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Seats and only return the `id`
+     * const seatWithIdOnly = await prisma.seat.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends SeatCreateManyAndReturnArgs>(args?: SelectSubset<T, SeatCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SeatPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Seat.
      * @param {SeatDeleteArgs} args - Arguments to delete one Seat.
      * @example
@@ -8148,6 +9042,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends SeatUpdateManyArgs>(args: SelectSubset<T, SeatUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Seats and returns the data updated in the database.
+     * @param {SeatUpdateManyAndReturnArgs} args - Arguments to update many Seats.
+     * @example
+     * // Update many Seats
+     * const seat = await prisma.seat.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Seats and only return the `id`
+     * const seatWithIdOnly = await prisma.seat.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends SeatUpdateManyAndReturnArgs>(args: SelectSubset<T, SeatUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SeatPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Seat.
@@ -8574,7 +9498,28 @@ export namespace Prisma {
      * The data used to create many Seats.
      */
     data: SeatCreateManyInput | SeatCreateManyInput[]
-    skipDuplicates?: boolean
+  }
+
+  /**
+   * Seat createManyAndReturn
+   */
+  export type SeatCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Seat
+     */
+    select?: SeatSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Seat
+     */
+    omit?: SeatOmit<ExtArgs> | null
+    /**
+     * The data used to create many Seats.
+     */
+    data: SeatCreateManyInput | SeatCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SeatIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -8619,6 +9564,36 @@ export namespace Prisma {
      * Limit how many Seats to update.
      */
     limit?: number
+  }
+
+  /**
+   * Seat updateManyAndReturn
+   */
+  export type SeatUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Seat
+     */
+    select?: SeatSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Seat
+     */
+    omit?: SeatOmit<ExtArgs> | null
+    /**
+     * The data used to update Seats.
+     */
+    data: XOR<SeatUpdateManyMutationInput, SeatUncheckedUpdateManyInput>
+    /**
+     * Filter which Seats to update
+     */
+    where?: SeatWhereInput
+    /**
+     * Limit how many Seats to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SeatIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -8946,7 +9921,25 @@ export namespace Prisma {
     _count?: boolean | ShowtimeCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["showtime"]>
 
+  export type ShowtimeSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    movieId?: boolean
+    roomId?: boolean
+    startsAt?: boolean
+    seatMultiplier?: boolean
+    movie?: boolean | MovieDefaultArgs<ExtArgs>
+    room?: boolean | RoomDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["showtime"]>
 
+  export type ShowtimeSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    movieId?: boolean
+    roomId?: boolean
+    startsAt?: boolean
+    seatMultiplier?: boolean
+    movie?: boolean | MovieDefaultArgs<ExtArgs>
+    room?: boolean | RoomDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["showtime"]>
 
   export type ShowtimeSelectScalar = {
     id?: boolean
@@ -8962,6 +9955,14 @@ export namespace Prisma {
     room?: boolean | RoomDefaultArgs<ExtArgs>
     tickets?: boolean | Showtime$ticketsArgs<ExtArgs>
     _count?: boolean | ShowtimeCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type ShowtimeIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    movie?: boolean | MovieDefaultArgs<ExtArgs>
+    room?: boolean | RoomDefaultArgs<ExtArgs>
+  }
+  export type ShowtimeIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    movie?: boolean | MovieDefaultArgs<ExtArgs>
+    room?: boolean | RoomDefaultArgs<ExtArgs>
   }
 
   export type $ShowtimePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -9095,6 +10096,30 @@ export namespace Prisma {
     createMany<T extends ShowtimeCreateManyArgs>(args?: SelectSubset<T, ShowtimeCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Showtimes and returns the data saved in the database.
+     * @param {ShowtimeCreateManyAndReturnArgs} args - Arguments to create many Showtimes.
+     * @example
+     * // Create many Showtimes
+     * const showtime = await prisma.showtime.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Showtimes and only return the `id`
+     * const showtimeWithIdOnly = await prisma.showtime.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ShowtimeCreateManyAndReturnArgs>(args?: SelectSubset<T, ShowtimeCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ShowtimePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Showtime.
      * @param {ShowtimeDeleteArgs} args - Arguments to delete one Showtime.
      * @example
@@ -9157,6 +10182,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends ShowtimeUpdateManyArgs>(args: SelectSubset<T, ShowtimeUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Showtimes and returns the data updated in the database.
+     * @param {ShowtimeUpdateManyAndReturnArgs} args - Arguments to update many Showtimes.
+     * @example
+     * // Update many Showtimes
+     * const showtime = await prisma.showtime.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Showtimes and only return the `id`
+     * const showtimeWithIdOnly = await prisma.showtime.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ShowtimeUpdateManyAndReturnArgs>(args: SelectSubset<T, ShowtimeUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ShowtimePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Showtime.
@@ -9583,7 +10638,28 @@ export namespace Prisma {
      * The data used to create many Showtimes.
      */
     data: ShowtimeCreateManyInput | ShowtimeCreateManyInput[]
-    skipDuplicates?: boolean
+  }
+
+  /**
+   * Showtime createManyAndReturn
+   */
+  export type ShowtimeCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Showtime
+     */
+    select?: ShowtimeSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Showtime
+     */
+    omit?: ShowtimeOmit<ExtArgs> | null
+    /**
+     * The data used to create many Showtimes.
+     */
+    data: ShowtimeCreateManyInput | ShowtimeCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ShowtimeIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -9628,6 +10704,36 @@ export namespace Prisma {
      * Limit how many Showtimes to update.
      */
     limit?: number
+  }
+
+  /**
+   * Showtime updateManyAndReturn
+   */
+  export type ShowtimeUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Showtime
+     */
+    select?: ShowtimeSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Showtime
+     */
+    omit?: ShowtimeOmit<ExtArgs> | null
+    /**
+     * The data used to update Showtimes.
+     */
+    data: XOR<ShowtimeUpdateManyMutationInput, ShowtimeUncheckedUpdateManyInput>
+    /**
+     * Filter which Showtimes to update
+     */
+    where?: ShowtimeWhereInput
+    /**
+     * Limit how many Showtimes to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ShowtimeIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -9975,7 +11081,31 @@ export namespace Prisma {
     _count?: boolean | TicketCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["ticket"]>
 
+  export type TicketSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    publicId?: boolean
+    userId?: boolean
+    showtimeId?: boolean
+    status?: boolean
+    paidAt?: boolean
+    totalPrice?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    showtime?: boolean | ShowtimeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["ticket"]>
 
+  export type TicketSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    publicId?: boolean
+    userId?: boolean
+    showtimeId?: boolean
+    status?: boolean
+    paidAt?: boolean
+    totalPrice?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    showtime?: boolean | ShowtimeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["ticket"]>
 
   export type TicketSelectScalar = {
     id?: boolean
@@ -9994,6 +11124,14 @@ export namespace Prisma {
     showtime?: boolean | ShowtimeDefaultArgs<ExtArgs>
     seats?: boolean | Ticket$seatsArgs<ExtArgs>
     _count?: boolean | TicketCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type TicketIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    showtime?: boolean | ShowtimeDefaultArgs<ExtArgs>
+  }
+  export type TicketIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    showtime?: boolean | ShowtimeDefaultArgs<ExtArgs>
   }
 
   export type $TicketPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -10130,6 +11268,30 @@ export namespace Prisma {
     createMany<T extends TicketCreateManyArgs>(args?: SelectSubset<T, TicketCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many Tickets and returns the data saved in the database.
+     * @param {TicketCreateManyAndReturnArgs} args - Arguments to create many Tickets.
+     * @example
+     * // Create many Tickets
+     * const ticket = await prisma.ticket.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Tickets and only return the `id`
+     * const ticketWithIdOnly = await prisma.ticket.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends TicketCreateManyAndReturnArgs>(args?: SelectSubset<T, TicketCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TicketPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a Ticket.
      * @param {TicketDeleteArgs} args - Arguments to delete one Ticket.
      * @example
@@ -10192,6 +11354,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends TicketUpdateManyArgs>(args: SelectSubset<T, TicketUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Tickets and returns the data updated in the database.
+     * @param {TicketUpdateManyAndReturnArgs} args - Arguments to update many Tickets.
+     * @example
+     * // Update many Tickets
+     * const ticket = await prisma.ticket.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Tickets and only return the `id`
+     * const ticketWithIdOnly = await prisma.ticket.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends TicketUpdateManyAndReturnArgs>(args: SelectSubset<T, TicketUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TicketPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Ticket.
@@ -10621,7 +11813,28 @@ export namespace Prisma {
      * The data used to create many Tickets.
      */
     data: TicketCreateManyInput | TicketCreateManyInput[]
-    skipDuplicates?: boolean
+  }
+
+  /**
+   * Ticket createManyAndReturn
+   */
+  export type TicketCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Ticket
+     */
+    select?: TicketSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Ticket
+     */
+    omit?: TicketOmit<ExtArgs> | null
+    /**
+     * The data used to create many Tickets.
+     */
+    data: TicketCreateManyInput | TicketCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TicketIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -10666,6 +11879,36 @@ export namespace Prisma {
      * Limit how many Tickets to update.
      */
     limit?: number
+  }
+
+  /**
+   * Ticket updateManyAndReturn
+   */
+  export type TicketUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Ticket
+     */
+    select?: TicketSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Ticket
+     */
+    omit?: TicketOmit<ExtArgs> | null
+    /**
+     * The data used to update Tickets.
+     */
+    data: XOR<TicketUpdateManyMutationInput, TicketUncheckedUpdateManyInput>
+    /**
+     * Filter which Tickets to update
+     */
+    where?: TicketWhereInput
+    /**
+     * Limit how many Tickets to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TicketIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -10959,7 +12202,19 @@ export namespace Prisma {
     seat?: boolean | SeatDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["ticketSeat"]>
 
+  export type TicketSeatSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    ticketId?: boolean
+    seatId?: boolean
+    ticket?: boolean | TicketDefaultArgs<ExtArgs>
+    seat?: boolean | SeatDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["ticketSeat"]>
 
+  export type TicketSeatSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    ticketId?: boolean
+    seatId?: boolean
+    ticket?: boolean | TicketDefaultArgs<ExtArgs>
+    seat?: boolean | SeatDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["ticketSeat"]>
 
   export type TicketSeatSelectScalar = {
     ticketId?: boolean
@@ -10968,6 +12223,14 @@ export namespace Prisma {
 
   export type TicketSeatOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"ticketId" | "seatId", ExtArgs["result"]["ticketSeat"]>
   export type TicketSeatInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    ticket?: boolean | TicketDefaultArgs<ExtArgs>
+    seat?: boolean | SeatDefaultArgs<ExtArgs>
+  }
+  export type TicketSeatIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    ticket?: boolean | TicketDefaultArgs<ExtArgs>
+    seat?: boolean | SeatDefaultArgs<ExtArgs>
+  }
+  export type TicketSeatIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     ticket?: boolean | TicketDefaultArgs<ExtArgs>
     seat?: boolean | SeatDefaultArgs<ExtArgs>
   }
@@ -11099,6 +12362,30 @@ export namespace Prisma {
     createMany<T extends TicketSeatCreateManyArgs>(args?: SelectSubset<T, TicketSeatCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
+     * Create many TicketSeats and returns the data saved in the database.
+     * @param {TicketSeatCreateManyAndReturnArgs} args - Arguments to create many TicketSeats.
+     * @example
+     * // Create many TicketSeats
+     * const ticketSeat = await prisma.ticketSeat.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many TicketSeats and only return the `ticketId`
+     * const ticketSeatWithTicketIdOnly = await prisma.ticketSeat.createManyAndReturn({
+     *   select: { ticketId: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends TicketSeatCreateManyAndReturnArgs>(args?: SelectSubset<T, TicketSeatCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TicketSeatPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
      * Delete a TicketSeat.
      * @param {TicketSeatDeleteArgs} args - Arguments to delete one TicketSeat.
      * @example
@@ -11161,6 +12448,36 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends TicketSeatUpdateManyArgs>(args: SelectSubset<T, TicketSeatUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more TicketSeats and returns the data updated in the database.
+     * @param {TicketSeatUpdateManyAndReturnArgs} args - Arguments to update many TicketSeats.
+     * @example
+     * // Update many TicketSeats
+     * const ticketSeat = await prisma.ticketSeat.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more TicketSeats and only return the `ticketId`
+     * const ticketSeatWithTicketIdOnly = await prisma.ticketSeat.updateManyAndReturn({
+     *   select: { ticketId: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends TicketSeatUpdateManyAndReturnArgs>(args: SelectSubset<T, TicketSeatUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TicketSeatPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one TicketSeat.
@@ -11583,7 +12900,28 @@ export namespace Prisma {
      * The data used to create many TicketSeats.
      */
     data: TicketSeatCreateManyInput | TicketSeatCreateManyInput[]
-    skipDuplicates?: boolean
+  }
+
+  /**
+   * TicketSeat createManyAndReturn
+   */
+  export type TicketSeatCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TicketSeat
+     */
+    select?: TicketSeatSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the TicketSeat
+     */
+    omit?: TicketSeatOmit<ExtArgs> | null
+    /**
+     * The data used to create many TicketSeats.
+     */
+    data: TicketSeatCreateManyInput | TicketSeatCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TicketSeatIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -11628,6 +12966,36 @@ export namespace Prisma {
      * Limit how many TicketSeats to update.
      */
     limit?: number
+  }
+
+  /**
+   * TicketSeat updateManyAndReturn
+   */
+  export type TicketSeatUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TicketSeat
+     */
+    select?: TicketSeatSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the TicketSeat
+     */
+    omit?: TicketSeatOmit<ExtArgs> | null
+    /**
+     * The data used to update TicketSeats.
+     */
+    data: XOR<TicketSeatUpdateManyMutationInput, TicketSeatUncheckedUpdateManyInput>
+    /**
+     * Filter which TicketSeats to update
+     */
+    where?: TicketSeatWhereInput
+    /**
+     * Limit how many TicketSeats to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TicketSeatIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -11720,9 +13088,6 @@ export namespace Prisma {
    */
 
   export const TransactionIsolationLevel: {
-    ReadUncommitted: 'ReadUncommitted',
-    ReadCommitted: 'ReadCommitted',
-    RepeatableRead: 'RepeatableRead',
     Serializable: 'Serializable'
   };
 
@@ -11744,7 +13109,13 @@ export namespace Prisma {
     title: 'title',
     description: 'description',
     durationMin: 'durationMin',
-    basePrice: 'basePrice'
+    basePrice: 'basePrice',
+    posterSmall: 'posterSmall',
+    banner: 'banner',
+    trailer: 'trailer',
+    genre: 'genre',
+    length: 'length',
+    language: 'language'
   };
 
   export type MovieScalarFieldEnum = (typeof MovieScalarFieldEnum)[keyof typeof MovieScalarFieldEnum]
@@ -11845,60 +13216,6 @@ export namespace Prisma {
   export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
-  export const UserOrderByRelevanceFieldEnum: {
-    id: 'id',
-    email: 'email',
-    name: 'name'
-  };
-
-  export type UserOrderByRelevanceFieldEnum = (typeof UserOrderByRelevanceFieldEnum)[keyof typeof UserOrderByRelevanceFieldEnum]
-
-
-  export const MovieOrderByRelevanceFieldEnum: {
-    title: 'title',
-    description: 'description'
-  };
-
-  export type MovieOrderByRelevanceFieldEnum = (typeof MovieOrderByRelevanceFieldEnum)[keyof typeof MovieOrderByRelevanceFieldEnum]
-
-
-  export const GenreOrderByRelevanceFieldEnum: {
-    name: 'name'
-  };
-
-  export type GenreOrderByRelevanceFieldEnum = (typeof GenreOrderByRelevanceFieldEnum)[keyof typeof GenreOrderByRelevanceFieldEnum]
-
-
-  export const CinemaOrderByRelevanceFieldEnum: {
-    name: 'name',
-    location: 'location'
-  };
-
-  export type CinemaOrderByRelevanceFieldEnum = (typeof CinemaOrderByRelevanceFieldEnum)[keyof typeof CinemaOrderByRelevanceFieldEnum]
-
-
-  export const RoomOrderByRelevanceFieldEnum: {
-    name: 'name'
-  };
-
-  export type RoomOrderByRelevanceFieldEnum = (typeof RoomOrderByRelevanceFieldEnum)[keyof typeof RoomOrderByRelevanceFieldEnum]
-
-
-  export const SeatOrderByRelevanceFieldEnum: {
-    row: 'row'
-  };
-
-  export type SeatOrderByRelevanceFieldEnum = (typeof SeatOrderByRelevanceFieldEnum)[keyof typeof SeatOrderByRelevanceFieldEnum]
-
-
-  export const TicketOrderByRelevanceFieldEnum: {
-    publicId: 'publicId',
-    userId: 'userId'
-  };
-
-  export type TicketOrderByRelevanceFieldEnum = (typeof TicketOrderByRelevanceFieldEnum)[keyof typeof TicketOrderByRelevanceFieldEnum]
-
-
   /**
    * Field references
    */
@@ -11980,7 +13297,6 @@ export namespace Prisma {
     name?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     tickets?: TicketOrderByRelationAggregateInput
-    _relevance?: UserOrderByRelevanceInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -12023,6 +13339,12 @@ export namespace Prisma {
     description?: StringNullableFilter<"Movie"> | string | null
     durationMin?: IntFilter<"Movie"> | number
     basePrice?: DecimalFilter<"Movie"> | Decimal | DecimalJsLike | number | string
+    posterSmall?: StringNullableFilter<"Movie"> | string | null
+    banner?: StringNullableFilter<"Movie"> | string | null
+    trailer?: StringNullableFilter<"Movie"> | string | null
+    genre?: StringNullableFilter<"Movie"> | string | null
+    length?: StringNullableFilter<"Movie"> | string | null
+    language?: StringNullableFilter<"Movie"> | string | null
     genres?: MovieGenreListRelationFilter
     showtimes?: ShowtimeListRelationFilter
   }
@@ -12033,9 +13355,14 @@ export namespace Prisma {
     description?: SortOrderInput | SortOrder
     durationMin?: SortOrder
     basePrice?: SortOrder
+    posterSmall?: SortOrderInput | SortOrder
+    banner?: SortOrderInput | SortOrder
+    trailer?: SortOrderInput | SortOrder
+    genre?: SortOrderInput | SortOrder
+    length?: SortOrderInput | SortOrder
+    language?: SortOrderInput | SortOrder
     genres?: MovieGenreOrderByRelationAggregateInput
     showtimes?: ShowtimeOrderByRelationAggregateInput
-    _relevance?: MovieOrderByRelevanceInput
   }
 
   export type MovieWhereUniqueInput = Prisma.AtLeast<{
@@ -12047,6 +13374,12 @@ export namespace Prisma {
     description?: StringNullableFilter<"Movie"> | string | null
     durationMin?: IntFilter<"Movie"> | number
     basePrice?: DecimalFilter<"Movie"> | Decimal | DecimalJsLike | number | string
+    posterSmall?: StringNullableFilter<"Movie"> | string | null
+    banner?: StringNullableFilter<"Movie"> | string | null
+    trailer?: StringNullableFilter<"Movie"> | string | null
+    genre?: StringNullableFilter<"Movie"> | string | null
+    length?: StringNullableFilter<"Movie"> | string | null
+    language?: StringNullableFilter<"Movie"> | string | null
     genres?: MovieGenreListRelationFilter
     showtimes?: ShowtimeListRelationFilter
   }, "id">
@@ -12057,6 +13390,12 @@ export namespace Prisma {
     description?: SortOrderInput | SortOrder
     durationMin?: SortOrder
     basePrice?: SortOrder
+    posterSmall?: SortOrderInput | SortOrder
+    banner?: SortOrderInput | SortOrder
+    trailer?: SortOrderInput | SortOrder
+    genre?: SortOrderInput | SortOrder
+    length?: SortOrderInput | SortOrder
+    language?: SortOrderInput | SortOrder
     _count?: MovieCountOrderByAggregateInput
     _avg?: MovieAvgOrderByAggregateInput
     _max?: MovieMaxOrderByAggregateInput
@@ -12073,6 +13412,12 @@ export namespace Prisma {
     description?: StringNullableWithAggregatesFilter<"Movie"> | string | null
     durationMin?: IntWithAggregatesFilter<"Movie"> | number
     basePrice?: DecimalWithAggregatesFilter<"Movie"> | Decimal | DecimalJsLike | number | string
+    posterSmall?: StringNullableWithAggregatesFilter<"Movie"> | string | null
+    banner?: StringNullableWithAggregatesFilter<"Movie"> | string | null
+    trailer?: StringNullableWithAggregatesFilter<"Movie"> | string | null
+    genre?: StringNullableWithAggregatesFilter<"Movie"> | string | null
+    length?: StringNullableWithAggregatesFilter<"Movie"> | string | null
+    language?: StringNullableWithAggregatesFilter<"Movie"> | string | null
   }
 
   export type GenreWhereInput = {
@@ -12088,7 +13433,6 @@ export namespace Prisma {
     id?: SortOrder
     name?: SortOrder
     movies?: MovieGenreOrderByRelationAggregateInput
-    _relevance?: GenreOrderByRelevanceInput
   }
 
   export type GenreWhereUniqueInput = Prisma.AtLeast<{
@@ -12179,7 +13523,6 @@ export namespace Prisma {
     name?: SortOrder
     location?: SortOrderInput | SortOrder
     rooms?: RoomOrderByRelationAggregateInput
-    _relevance?: CinemaOrderByRelevanceInput
   }
 
   export type CinemaWhereUniqueInput = Prisma.AtLeast<{
@@ -12231,7 +13574,6 @@ export namespace Prisma {
     cinema?: CinemaOrderByWithRelationInput
     seats?: SeatOrderByRelationAggregateInput
     showtimes?: ShowtimeOrderByRelationAggregateInput
-    _relevance?: RoomOrderByRelevanceInput
   }
 
   export type RoomWhereUniqueInput = Prisma.AtLeast<{
@@ -12289,7 +13631,6 @@ export namespace Prisma {
     priceMultiplier?: SortOrder
     room?: RoomOrderByWithRelationInput
     TicketSeat?: TicketSeatOrderByRelationAggregateInput
-    _relevance?: SeatOrderByRelevanceInput
   }
 
   export type SeatWhereUniqueInput = Prisma.AtLeast<{
@@ -12425,7 +13766,6 @@ export namespace Prisma {
     user?: UserOrderByWithRelationInput
     showtime?: ShowtimeOrderByWithRelationInput
     seats?: TicketSeatOrderByRelationAggregateInput
-    _relevance?: TicketOrderByRelevanceInput
   }
 
   export type TicketWhereUniqueInput = Prisma.AtLeast<{
@@ -12579,6 +13919,12 @@ export namespace Prisma {
     description?: string | null
     durationMin: number
     basePrice: Decimal | DecimalJsLike | number | string
+    posterSmall?: string | null
+    banner?: string | null
+    trailer?: string | null
+    genre?: string | null
+    length?: string | null
+    language?: string | null
     genres?: MovieGenreCreateNestedManyWithoutMovieInput
     showtimes?: ShowtimeCreateNestedManyWithoutMovieInput
   }
@@ -12589,6 +13935,12 @@ export namespace Prisma {
     description?: string | null
     durationMin: number
     basePrice: Decimal | DecimalJsLike | number | string
+    posterSmall?: string | null
+    banner?: string | null
+    trailer?: string | null
+    genre?: string | null
+    length?: string | null
+    language?: string | null
     genres?: MovieGenreUncheckedCreateNestedManyWithoutMovieInput
     showtimes?: ShowtimeUncheckedCreateNestedManyWithoutMovieInput
   }
@@ -12598,6 +13950,12 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     durationMin?: IntFieldUpdateOperationsInput | number
     basePrice?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    posterSmall?: NullableStringFieldUpdateOperationsInput | string | null
+    banner?: NullableStringFieldUpdateOperationsInput | string | null
+    trailer?: NullableStringFieldUpdateOperationsInput | string | null
+    genre?: NullableStringFieldUpdateOperationsInput | string | null
+    length?: NullableStringFieldUpdateOperationsInput | string | null
+    language?: NullableStringFieldUpdateOperationsInput | string | null
     genres?: MovieGenreUpdateManyWithoutMovieNestedInput
     showtimes?: ShowtimeUpdateManyWithoutMovieNestedInput
   }
@@ -12608,6 +13966,12 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     durationMin?: IntFieldUpdateOperationsInput | number
     basePrice?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    posterSmall?: NullableStringFieldUpdateOperationsInput | string | null
+    banner?: NullableStringFieldUpdateOperationsInput | string | null
+    trailer?: NullableStringFieldUpdateOperationsInput | string | null
+    genre?: NullableStringFieldUpdateOperationsInput | string | null
+    length?: NullableStringFieldUpdateOperationsInput | string | null
+    language?: NullableStringFieldUpdateOperationsInput | string | null
     genres?: MovieGenreUncheckedUpdateManyWithoutMovieNestedInput
     showtimes?: ShowtimeUncheckedUpdateManyWithoutMovieNestedInput
   }
@@ -12618,6 +13982,12 @@ export namespace Prisma {
     description?: string | null
     durationMin: number
     basePrice: Decimal | DecimalJsLike | number | string
+    posterSmall?: string | null
+    banner?: string | null
+    trailer?: string | null
+    genre?: string | null
+    length?: string | null
+    language?: string | null
   }
 
   export type MovieUpdateManyMutationInput = {
@@ -12625,6 +13995,12 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     durationMin?: IntFieldUpdateOperationsInput | number
     basePrice?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    posterSmall?: NullableStringFieldUpdateOperationsInput | string | null
+    banner?: NullableStringFieldUpdateOperationsInput | string | null
+    trailer?: NullableStringFieldUpdateOperationsInput | string | null
+    genre?: NullableStringFieldUpdateOperationsInput | string | null
+    length?: NullableStringFieldUpdateOperationsInput | string | null
+    language?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type MovieUncheckedUpdateManyInput = {
@@ -12633,6 +14009,12 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     durationMin?: IntFieldUpdateOperationsInput | number
     basePrice?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    posterSmall?: NullableStringFieldUpdateOperationsInput | string | null
+    banner?: NullableStringFieldUpdateOperationsInput | string | null
+    trailer?: NullableStringFieldUpdateOperationsInput | string | null
+    genre?: NullableStringFieldUpdateOperationsInput | string | null
+    length?: NullableStringFieldUpdateOperationsInput | string | null
+    language?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type GenreCreateInput = {
@@ -13039,7 +14421,6 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
@@ -13054,7 +14435,6 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
@@ -13082,12 +14462,6 @@ export namespace Prisma {
 
   export type TicketOrderByRelationAggregateInput = {
     _count?: SortOrder
-  }
-
-  export type UserOrderByRelevanceInput = {
-    fields: UserOrderByRelevanceFieldEnum | UserOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
   }
 
   export type UserCountOrderByAggregateInput = {
@@ -13122,7 +14496,6 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
     not?: NestedStringWithAggregatesFilter<$PrismaModel> | string
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedStringFilter<$PrismaModel>
@@ -13140,7 +14513,6 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
     not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedStringNullableFilter<$PrismaModel>
@@ -13203,18 +14575,18 @@ export namespace Prisma {
     _count?: SortOrder
   }
 
-  export type MovieOrderByRelevanceInput = {
-    fields: MovieOrderByRelevanceFieldEnum | MovieOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
-  }
-
   export type MovieCountOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
     description?: SortOrder
     durationMin?: SortOrder
     basePrice?: SortOrder
+    posterSmall?: SortOrder
+    banner?: SortOrder
+    trailer?: SortOrder
+    genre?: SortOrder
+    length?: SortOrder
+    language?: SortOrder
   }
 
   export type MovieAvgOrderByAggregateInput = {
@@ -13229,6 +14601,12 @@ export namespace Prisma {
     description?: SortOrder
     durationMin?: SortOrder
     basePrice?: SortOrder
+    posterSmall?: SortOrder
+    banner?: SortOrder
+    trailer?: SortOrder
+    genre?: SortOrder
+    length?: SortOrder
+    language?: SortOrder
   }
 
   export type MovieMinOrderByAggregateInput = {
@@ -13237,6 +14615,12 @@ export namespace Prisma {
     description?: SortOrder
     durationMin?: SortOrder
     basePrice?: SortOrder
+    posterSmall?: SortOrder
+    banner?: SortOrder
+    trailer?: SortOrder
+    genre?: SortOrder
+    length?: SortOrder
+    language?: SortOrder
   }
 
   export type MovieSumOrderByAggregateInput = {
@@ -13275,12 +14659,6 @@ export namespace Prisma {
     _sum?: NestedDecimalFilter<$PrismaModel>
     _min?: NestedDecimalFilter<$PrismaModel>
     _max?: NestedDecimalFilter<$PrismaModel>
-  }
-
-  export type GenreOrderByRelevanceInput = {
-    fields: GenreOrderByRelevanceFieldEnum | GenreOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
   }
 
   export type GenreCountOrderByAggregateInput = {
@@ -13356,12 +14734,6 @@ export namespace Prisma {
     _count?: SortOrder
   }
 
-  export type CinemaOrderByRelevanceInput = {
-    fields: CinemaOrderByRelevanceFieldEnum | CinemaOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
-  }
-
   export type CinemaCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
@@ -13401,12 +14773,6 @@ export namespace Prisma {
 
   export type SeatOrderByRelationAggregateInput = {
     _count?: SortOrder
-  }
-
-  export type RoomOrderByRelevanceInput = {
-    fields: RoomOrderByRelevanceFieldEnum | RoomOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
   }
 
   export type RoomCountOrderByAggregateInput = {
@@ -13457,12 +14823,6 @@ export namespace Prisma {
 
   export type TicketSeatOrderByRelationAggregateInput = {
     _count?: SortOrder
-  }
-
-  export type SeatOrderByRelevanceInput = {
-    fields: SeatOrderByRelevanceFieldEnum | SeatOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
   }
 
   export type SeatRoomIdRowNumberCompoundUniqueInput = {
@@ -13613,12 +14973,6 @@ export namespace Prisma {
   export type ShowtimeScalarRelationFilter = {
     is?: ShowtimeWhereInput
     isNot?: ShowtimeWhereInput
-  }
-
-  export type TicketOrderByRelevanceInput = {
-    fields: TicketOrderByRelevanceFieldEnum | TicketOrderByRelevanceFieldEnum[]
-    sort: SortOrder
-    search: string
   }
 
   export type TicketCountOrderByAggregateInput = {
@@ -14349,7 +15703,6 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
@@ -14364,7 +15717,6 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
@@ -14390,7 +15742,6 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
     not?: NestedStringWithAggregatesFilter<$PrismaModel> | string
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedStringFilter<$PrismaModel>
@@ -14419,7 +15770,6 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    search?: string
     not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedStringNullableFilter<$PrismaModel>
@@ -14620,7 +15970,6 @@ export namespace Prisma {
 
   export type TicketCreateManyUserInputEnvelope = {
     data: TicketCreateManyUserInput | TicketCreateManyUserInput[]
-    skipDuplicates?: boolean
   }
 
   export type TicketUpsertWithWhereUniqueWithoutUserInput = {
@@ -14668,7 +16017,6 @@ export namespace Prisma {
 
   export type MovieGenreCreateManyMovieInputEnvelope = {
     data: MovieGenreCreateManyMovieInput | MovieGenreCreateManyMovieInput[]
-    skipDuplicates?: boolean
   }
 
   export type ShowtimeCreateWithoutMovieInput = {
@@ -14694,7 +16042,6 @@ export namespace Prisma {
 
   export type ShowtimeCreateManyMovieInputEnvelope = {
     data: ShowtimeCreateManyMovieInput | ShowtimeCreateManyMovieInput[]
-    skipDuplicates?: boolean
   }
 
   export type MovieGenreUpsertWithWhereUniqueWithoutMovieInput = {
@@ -14763,7 +16110,6 @@ export namespace Prisma {
 
   export type MovieGenreCreateManyGenreInputEnvelope = {
     data: MovieGenreCreateManyGenreInput | MovieGenreCreateManyGenreInput[]
-    skipDuplicates?: boolean
   }
 
   export type MovieGenreUpsertWithWhereUniqueWithoutGenreInput = {
@@ -14787,6 +16133,12 @@ export namespace Prisma {
     description?: string | null
     durationMin: number
     basePrice: Decimal | DecimalJsLike | number | string
+    posterSmall?: string | null
+    banner?: string | null
+    trailer?: string | null
+    genre?: string | null
+    length?: string | null
+    language?: string | null
     showtimes?: ShowtimeCreateNestedManyWithoutMovieInput
   }
 
@@ -14796,6 +16148,12 @@ export namespace Prisma {
     description?: string | null
     durationMin: number
     basePrice: Decimal | DecimalJsLike | number | string
+    posterSmall?: string | null
+    banner?: string | null
+    trailer?: string | null
+    genre?: string | null
+    length?: string | null
+    language?: string | null
     showtimes?: ShowtimeUncheckedCreateNestedManyWithoutMovieInput
   }
 
@@ -14834,6 +16192,12 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     durationMin?: IntFieldUpdateOperationsInput | number
     basePrice?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    posterSmall?: NullableStringFieldUpdateOperationsInput | string | null
+    banner?: NullableStringFieldUpdateOperationsInput | string | null
+    trailer?: NullableStringFieldUpdateOperationsInput | string | null
+    genre?: NullableStringFieldUpdateOperationsInput | string | null
+    length?: NullableStringFieldUpdateOperationsInput | string | null
+    language?: NullableStringFieldUpdateOperationsInput | string | null
     showtimes?: ShowtimeUpdateManyWithoutMovieNestedInput
   }
 
@@ -14843,6 +16207,12 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     durationMin?: IntFieldUpdateOperationsInput | number
     basePrice?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    posterSmall?: NullableStringFieldUpdateOperationsInput | string | null
+    banner?: NullableStringFieldUpdateOperationsInput | string | null
+    trailer?: NullableStringFieldUpdateOperationsInput | string | null
+    genre?: NullableStringFieldUpdateOperationsInput | string | null
+    length?: NullableStringFieldUpdateOperationsInput | string | null
+    language?: NullableStringFieldUpdateOperationsInput | string | null
     showtimes?: ShowtimeUncheckedUpdateManyWithoutMovieNestedInput
   }
 
@@ -14886,7 +16256,6 @@ export namespace Prisma {
 
   export type RoomCreateManyCinemaInputEnvelope = {
     data: RoomCreateManyCinemaInput | RoomCreateManyCinemaInput[]
-    skipDuplicates?: boolean
   }
 
   export type RoomUpsertWithWhereUniqueWithoutCinemaInput = {
@@ -14954,7 +16323,6 @@ export namespace Prisma {
 
   export type SeatCreateManyRoomInputEnvelope = {
     data: SeatCreateManyRoomInput | SeatCreateManyRoomInput[]
-    skipDuplicates?: boolean
   }
 
   export type ShowtimeCreateWithoutRoomInput = {
@@ -14980,7 +16348,6 @@ export namespace Prisma {
 
   export type ShowtimeCreateManyRoomInputEnvelope = {
     data: ShowtimeCreateManyRoomInput | ShowtimeCreateManyRoomInput[]
-    skipDuplicates?: boolean
   }
 
   export type CinemaUpsertWithoutRoomsInput = {
@@ -15082,7 +16449,6 @@ export namespace Prisma {
 
   export type TicketSeatCreateManySeatInputEnvelope = {
     data: TicketSeatCreateManySeatInput | TicketSeatCreateManySeatInput[]
-    skipDuplicates?: boolean
   }
 
   export type RoomUpsertWithoutSeatsInput = {
@@ -15138,6 +16504,12 @@ export namespace Prisma {
     description?: string | null
     durationMin: number
     basePrice: Decimal | DecimalJsLike | number | string
+    posterSmall?: string | null
+    banner?: string | null
+    trailer?: string | null
+    genre?: string | null
+    length?: string | null
+    language?: string | null
     genres?: MovieGenreCreateNestedManyWithoutMovieInput
   }
 
@@ -15147,6 +16519,12 @@ export namespace Prisma {
     description?: string | null
     durationMin: number
     basePrice: Decimal | DecimalJsLike | number | string
+    posterSmall?: string | null
+    banner?: string | null
+    trailer?: string | null
+    genre?: string | null
+    length?: string | null
+    language?: string | null
     genres?: MovieGenreUncheckedCreateNestedManyWithoutMovieInput
   }
 
@@ -15202,7 +16580,6 @@ export namespace Prisma {
 
   export type TicketCreateManyShowtimeInputEnvelope = {
     data: TicketCreateManyShowtimeInput | TicketCreateManyShowtimeInput[]
-    skipDuplicates?: boolean
   }
 
   export type MovieUpsertWithoutShowtimesInput = {
@@ -15221,6 +16598,12 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     durationMin?: IntFieldUpdateOperationsInput | number
     basePrice?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    posterSmall?: NullableStringFieldUpdateOperationsInput | string | null
+    banner?: NullableStringFieldUpdateOperationsInput | string | null
+    trailer?: NullableStringFieldUpdateOperationsInput | string | null
+    genre?: NullableStringFieldUpdateOperationsInput | string | null
+    length?: NullableStringFieldUpdateOperationsInput | string | null
+    language?: NullableStringFieldUpdateOperationsInput | string | null
     genres?: MovieGenreUpdateManyWithoutMovieNestedInput
   }
 
@@ -15230,6 +16613,12 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     durationMin?: IntFieldUpdateOperationsInput | number
     basePrice?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    posterSmall?: NullableStringFieldUpdateOperationsInput | string | null
+    banner?: NullableStringFieldUpdateOperationsInput | string | null
+    trailer?: NullableStringFieldUpdateOperationsInput | string | null
+    genre?: NullableStringFieldUpdateOperationsInput | string | null
+    length?: NullableStringFieldUpdateOperationsInput | string | null
+    language?: NullableStringFieldUpdateOperationsInput | string | null
     genres?: MovieGenreUncheckedUpdateManyWithoutMovieNestedInput
   }
 
@@ -15328,7 +16717,6 @@ export namespace Prisma {
 
   export type TicketSeatCreateManyTicketInputEnvelope = {
     data: TicketSeatCreateManyTicketInput | TicketSeatCreateManyTicketInput[]
-    skipDuplicates?: boolean
   }
 
   export type UserUpsertWithoutTicketsInput = {
