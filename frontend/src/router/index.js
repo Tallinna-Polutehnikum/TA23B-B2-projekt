@@ -4,23 +4,28 @@ const routes = [
   {
     path: '/',
     name: 'Main',
-    component: () => import('@/pages/Main.vue')
+    component: () => import('@/pages/Main.vue'),
   },
   {
     path: '/movie/:id',
     name: 'MoviePage',
-    component: () => import('@/pages/MoviePage.vue')
+    component: () => import('@/pages/MoviePage.vue'),
   },
   {
     path: '/movie-select/:id',
     name: 'MovieSelect',
-    component: () => import('@/pages/MovieSelect.vue')
+    component: () => import('@/pages/MovieSelect.vue'),
   },
   {
-    path: '/payment',          
+    path: '/payment',
     name: 'Payment',
-    component: () => import('@/pages/PaymentPage.vue')
-  }
+    component: () => import('@/pages/PaymentPage.vue'),
+  },
+  {
+    path: '/admin/add-film',
+    name: 'AdminAddFilm',
+    component: () => import('@/pages/AdminAddFilm.vue'),
+  },
 ]
 
 const router = createRouter({

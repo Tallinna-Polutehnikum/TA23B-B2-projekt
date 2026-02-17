@@ -1,25 +1,23 @@
 <template>
   <div class="movie-page">
 
-    
-<div
-  v-if="movieId == 1"
-  class="banner"
-  :style="{ backgroundImage: `url('https://images.markus.live/mcswebsites.blob.core.windows.net/1013/Event_9644/landscape_billboard_wide/RunningMan_3840x750.png?width=3360&height=640&format=jpg&quality=90')` }"
->
-  <h1>{{ movie.title }}</h1>
-</div>
+    <div
+      v-if="movieId == 1"
+      class="banner"
+      :style="{ backgroundImage: `url('https://images.markus.live/mcswebsites.blob.core.windows.net/1013/Event_9644/landscape_billboard_wide/RunningMan_3840x750.png?width=3360&height=640&format=jpg&quality=90')` }"
+    >
+      <h1>{{ movie.title }}</h1>
+    </div>
 
-<div
-  v-else
-  class="banner"
-  :style="{ backgroundImage: `url(${movie.banner || movie.posterSmall})` }"
->
-  <h1>{{ movie.title }}</h1>
-</div>
+    <div
+      v-else
+      class="banner"
+      :style="{ backgroundImage: `url(${movie.banner || movie.posterSmall})` }"
+    >
+      <h1>{{ movie.title }}</h1>
+    </div>
     <div class="content">
 
-      
       <div class="details">
         <h3>Aja valik</h3>
 
@@ -67,98 +65,94 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue"
-import { useRoute, useRouter } from "vue-router"
+  import { onMounted, ref } from 'vue'
+  import { useRoute, useRouter } from 'vue-router'
 
-const route = useRoute()
-const router = useRouter()
-const movieId = Number(route.params.id) 
+  const route = useRoute()
+  const router = useRouter()
+  const movieId = Number(route.params.id)
 
+  const movies = [
+    {
+      id: 1,
+      title: 'Pogenev mees',
+      length: '2h 13min',
+      genre: 'Marul, Ulmefilm, Thriller',
+      posterSmall: 'src/assets/poster1.jpg',
+      banner: 'src/assets/banner1.jpg',
+      language: 'Estonski',
+      description:
+        'Miljonid jahivad Uks pogeneb Koik vaatavad Kohe algab maailma populaarseim telemang...',
+    },
+    {
+      id: 2,
+      title: 'The Glassworker',
+      length: '—',
+      genre: 'Animatsioon, Draama',
+      posterSmall: 'src/assets/poster2.jpg',
+      banner: 'src/assets/banner2.jpg',
+      language: 'Inglise',
+      description: 'Filmi kirjeldus The Glassworker',
+    },
+  ]
 
-const movies = [
-  {
-    id: 1,
-    title: "Pogenev mees",
-    length: "2h 13min",
-    genre: "Marul, Ulmefilm, Thriller",
-    posterSmall: "src/assets/poster1.jpg",
-    banner: "src/assets/banner1.jpg",
-    language: "Estonski",
-    description:
-      "Miljonid jahivad Uks pogeneb Koik vaatavad Kohe algab maailma populaarseim telemang..."
-  },
-  {
-    id: 2,
-    title: "The Glassworker",
-    length: "—",
-    genre: "Animatsioon, Draama",
-    posterSmall: "src/assets/poster2.jpg",
-    banner: "src/assets/banner2.jpg",
-    language: "Inglise",
-    description: "Filmi kirjeldus The Glassworker"
-  }
-]
+  const movie = ref({})
+  const times = ref(['12:30', '14:10', '16:00', '18:45', '21:15'])
+  const selectedTime = ref(null)
+  const seats = ref([])
+  const selectedSeats = ref([])
 
-const movie = ref({})
-const times = ref(["12:30", "14:10", "16:00", "18:45", "21:15"])
-const selectedTime = ref(null)
-const seats = ref([])
-const selectedSeats = ref([])
-
-onMounted(() => {
-  const foundMovie = movies.find(m => m.id === movieId)
-  if (!foundMovie) {
-    console.error("Filmi ei leitud")
-    return
-  }
-  movie.value = foundMovie
-
-  // Генерация 40 мест
-  seats.value = Array.from({ length: 40 }, (_, i) => ({
-    id: i + 1,
-    label: i + 1,
-    taken: Math.random() < 0.15
-  }))
-})
-
-function toggleSeat(seat) {
-  if (seat.taken) return
-
-  const index = selectedSeats.value.indexOf(seat.id)
-  if (index > -1) {
-    selectedSeats.value.splice(index, 1)
-  } else {
-    selectedSeats.value.push(seat.id)
-  }
-}
-
-
-function confirmBooking() {
-  if (!selectedTime.value) {
-    console.warn("Vali aeg!")
-    return
-  }
-
-  if (!selectedSeats.value.length) {
-    console.warn("Vali vähemalt üks koht!")
-    return
-  }
-
-  router.push({
-    name: "Payment",
-    query: {
-      movieId: movie.value.id,
-      title: movie.value.title,
-      time: selectedTime.value,
-      seats: selectedSeats.value.join(',')
+  onMounted(() => {
+    const foundMovie = movies.find(m => m.id === movieId)
+    if (!foundMovie) {
+      console.error('Filmi ei leitud')
+      return
     }
+    movie.value = foundMovie
+
+    // Генерация 40 мест
+    seats.value = Array.from({ length: 40 }, (_, i) => ({
+      id: i + 1,
+      label: i + 1,
+      taken: Math.random() < 0.15,
+    }))
   })
-}
+
+  function toggleSeat (seat) {
+    if (seat.taken) return
+
+    const index = selectedSeats.value.indexOf(seat.id)
+    if (index === -1) {
+      selectedSeats.value.push(seat.id)
+    } else {
+      selectedSeats.value.splice(index, 1)
+    }
+  }
+
+  function confirmBooking () {
+    if (!selectedTime.value) {
+      console.warn('Vali aeg!')
+      return
+    }
+
+    if (selectedSeats.value.length === 0) {
+      console.warn('Vali vähemalt üks koht!')
+      return
+    }
+
+    router.push({
+      name: 'Payment',
+      query: {
+        movieId: movie.value.id,
+        title: movie.value.title,
+        time: selectedTime.value,
+        seats: selectedSeats.value.join(','),
+      },
+    })
+  }
 </script>
 
-
 <style scoped>
-
 
 .movie-page {
   min-height: 100vh;

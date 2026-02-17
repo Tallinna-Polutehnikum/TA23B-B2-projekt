@@ -11,33 +11,52 @@
         </div>
 
         <h2>Makseinfo</h2>
-        <form @submit.prevent="payTicket" class="payment-form">
+        <form class="payment-form" @submit.prevent="payTicket">
           <div class="form-group">
             <label for="cardName">Nimi kaardil</label>
-            <input id="cardName" v-model="cardName" type="text" required placeholder="Mati Maasikas">
+            <input
+              id="cardName"
+              v-model="cardName"
+              placeholder="Mati Maasikas"
+              required
+              type="text"
+            >
           </div>
 
           <div class="form-group">
             <label for="cardNumber">Kaardi number</label>
-            <input id="cardNumber" v-model="cardNumber" type="text" required maxlength="16" placeholder="1234 5678 9012 3456">
+            <input
+              id="cardNumber"
+              v-model="cardNumber"
+              maxlength="16"
+              placeholder="1234 5678 9012 3456"
+              required
+              type="text"
+            >
           </div>
 
           <div class="form-row">
             <div class="form-group">
-                <label>MM / YY</label>
-                <input type="text" placeholder="01/25">
+              <label>MM / YY</label>
+              <input placeholder="01/25" type="text">
             </div>
-         <div class="form-group">
-            <label>CVV</label>
-            <input type="text" placeholder="123" class="short">
-         </div>
-        </div>
+            <div class="form-group">
+              <label>CVV</label>
+              <input class="short" placeholder="123" type="text">
+            </div>
+          </div>
           <div class="form-group">
             <label for="email">E-post kinnituseks</label>
-            <input id="email" v-model="email" type="email" required placeholder="example@mail.com">
+            <input
+              id="email"
+              v-model="email"
+              placeholder="example@mail.com"
+              required
+              type="email"
+            >
           </div>
 
-          <button type="submit" class="btn">Maksa</button>
+          <button class="btn" type="submit">Maksa</button>
         </form>
       </div>
 
@@ -49,44 +68,43 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+  import { onMounted, ref } from 'vue'
+  import { useRoute } from 'vue-router'
 
-const route = useRoute()
-const movie = ref(null)
-const time = ref('')
-const seats = ref([])
+  const route = useRoute()
+  const movie = ref(null)
+  const time = ref('')
+  const seats = ref([])
 
+  const cardName = ref('')
+  const cardNumber = ref('')
+  const expiry = ref('')
+  const cvv = ref('')
+  const email = ref('')
 
-const cardName = ref('')
-const cardNumber = ref('')
-const expiry = ref('')
-const cvv = ref('')
-const email = ref('')
+  onMounted(() => {
+    const query = route.query
+    if (query.movieId && query.title && query.time && query.seats) {
+      movie.value = { id: query.movieId, title: query.title }
+      time.value = query.time
+      seats.value = query.seats.split(',')
+    }
+  })
 
-onMounted(() => {
-  const query = route.query
-  if (query.movieId && query.title && query.time && query.seats) {
-    movie.value = { id: query.movieId, title: query.title }
-    time.value = query.time
-    seats.value = query.seats.split(',')
+  function payTicket () {
+    if (!cardName.value || !cardNumber.value || !expiry.value || !cvv.value || !email.value) {
+      alert('Palun täida kõik makseväljad.')
+      return
+    }
+
+    alert(`Pileti makse filmile "${movie.value.title}" õnnestus!\nKohad: ${seats.value.join(', ')}\nKinnitus saadeti aadressile ${email.value}`)
+
+    cardName.value = ''
+    cardNumber.value = ''
+    expiry.value = ''
+    cvv.value = ''
+    email.value = ''
   }
-})
-
-function payTicket() {
-  if (!cardName.value || !cardNumber.value || !expiry.value || !cvv.value || !email.value) {
-    alert('Palun täida kõik makseväljad.')
-    return
-  }
-
-  alert(`Pileti makse filmile "${movie.value.title}" õnnestus!\nKohad: ${seats.join(', ')}\nKinnitus saadeti aadressile ${email.value}`)
-
-  cardName.value = ''
-  cardNumber.value = ''
-  expiry.value = ''
-  cvv.value = ''
-  email.value = ''
-}
 </script>
 
 <style scoped>
@@ -147,12 +165,12 @@ h2 {
   border-radius: 8px;
   border: none;
   font-size: 1.2rem;
-  background: #333;      
-  color: white;           
+  background: #333;
+  color: white;
 }
 
 .form-group input::placeholder {
-  color: #bbb;            
+  color: #bbb;
 }
 
 .form-row {
@@ -177,8 +195,6 @@ h2 {
 }
 
 .form-row input.short {
-  width: 100px; 
+  width: 100px;
 }
 </style>
-
-
