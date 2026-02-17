@@ -21,7 +21,7 @@
 
       
       <div class="details">
-        <h3>Выбор времени</h3>
+        <h3>Aja valik</h3>
 
         <div class="time-list">
           <button
@@ -35,7 +35,7 @@
           </button>
         </div>
 
-        <h3 style="margin-top: 25px;">Выбор мест</h3>
+        <h3 style="margin-top: 25px;">Kohtade valik</h3>
 
         <div class="seats">
           <div
@@ -51,11 +51,11 @@
 
         <div class="buttons" style="margin-top: 30px;">
           <button class="btn booking-btn" @click="confirmBooking">
-            ✔ Подтвердить
+            ✔ Kinnita
           </button>
 
           <router-link to="/">
-            <button class="btn back-btn">← Вернуться</button>
+            <button class="btn back-btn">← Tagasi</button>
           </router-link>
         </div>
 
@@ -91,11 +91,11 @@ const movies = [
     id: 2,
     title: "The Glassworker",
     length: "—",
-    genre: "Анимация, Драма",
+    genre: "Animatsioon, Draama",
     posterSmall: "src/assets/poster2.jpg",
     banner: "src/assets/banner2.jpg",
-    language: "Английский",
-    description: "Описание фильма The Glassworker"
+    language: "Inglise",
+    description: "Filmi kirjeldus The Glassworker"
   }
 ]
 
@@ -108,7 +108,7 @@ const selectedSeats = ref([])
 onMounted(() => {
   const foundMovie = movies.find(m => m.id === movieId)
   if (!foundMovie) {
-    console.error("Фильм не найден")
+    console.error("Filmi ei leitud")
     return
   }
   movie.value = foundMovie
@@ -135,12 +135,12 @@ function toggleSeat(seat) {
 
 function confirmBooking() {
   if (!selectedTime.value) {
-    console.warn("Выберите время!")
+    console.warn("Vali aeg!")
     return
   }
 
   if (!selectedSeats.value.length) {
-    console.warn("Выберите хотя бы одно место!")
+    console.warn("Vali vähemalt üks koht!")
     return
   }
 

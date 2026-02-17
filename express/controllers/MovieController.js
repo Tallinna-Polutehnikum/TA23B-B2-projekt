@@ -4,40 +4,140 @@ import prisma from '../prismaClient.js';
 const router = express.Router();
 export default router;
 
-let movies = [
-    { id: 1, title: 'The Shawshank Redemption', year: 1994 },
-    { id: 2, title: 'The Godfather', year: 1972 },
-    { id: 3, title: 'The Dark Knight', year: 2008 }
-];
+// Поля, которые разрешено создавать/обновлять через API
+const validFields = {
+  title: 'string',
+  description: 'string',
+  durationMin: 'number',
+  basePrice: 'number',
+  posterSmall: 'string',
+  banner: 'string',
+  trailer: 'string',
+  genre: 'string',
+  length: 'string',
+  language: 'string'
+};
 
-const validFields = {"title": "string","description":"string","durationMin":"number","basePrice":"number"}
+function buildCleanData(body) {
+  const cleanData = {};
 
+  for (const field in validFields) {
+    if (body[field] !== undefined) {
+      if (typeof body[field] !== validFields[field]) {
+        throw new Error(
+          `Invalid type for field ${field}, should be ${validFields[field]}.`
+        );
+      }
+      cleanData[field] = body[field];
+    }
+  }
+
+  return cleanData;
+}
+
+// GET /movies – список всех фильмов
 router.get('/', async function (req, res) {
-    res.json(await prisma.movie.findMany());
+  try {
+    const movies = await prisma.movie.findMany();
+    res.json(movies);
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ error: 'Failed to fetch movies' });
+  }
 });
 
-router.get('/:id', function (req, res) {
-    let movie = movies.find(m => m.id === parseInt(req.params.id));
-    if (movie) {
-        res.json(movie);
-    } else {
-        res.status(404).send('Movie not found');
+// GET /movies/:id – один фильм по id
+router.get('/:id', async function (req, res) {
+  const id = Number.parseInt(req.params.id, 10);
+  if (Number.isNaN(id)) {
+    return res.status(400).json({ error: 'Invalid movie id' });
+  }
+
+  try {
+    const movie = await prisma.movie.findUnique({
+      where: { id }
+    });
+
+    if (!movie) {
+      return res.status(404).json({ error: 'Movie not found' });
     }
+
+    res.json(movie);
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ error: 'Failed to fetch movie' });
+  }
 });
 
+// POST /movies – создание фильма
 router.post('/', async function (req, res) {
-    const cleanData = {};
-    for (const field in validFields) {
-        if (req.body[field] !== undefined) {
-            if (typeof req.body[field] !== validFields[field]) {
-                return res.status(400).send(`Invalid type for field ${field}, should be ${validFields[field]}.`);
-            }
-            cleanData[field] = req.body[field];
-        }
-    }
-    
+  let cleanData;
+  try {
+    cleanData = buildCleanData(req.body);
+  } catch (e) {
+    return res.status(400).json({ error: e.message });
+  }
+
+  try {
     const newMovie = await prisma.movie.create({
-        data: cleanData
+      data: cleanData
     });
     res.status(201).json(newMovie);
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ error: 'Failed to create movie' });
+  }
+});
+
+// PUT /movies/:id – полное обновление фильма
+router.put('/:id', async function (req, res) {
+  const id = Number.parseInt(req.params.id, 10);
+  if (Number.isNaN(id)) {
+    return res.status(400).json({ error: 'Invalid movie id' });
+  }
+
+  let cleanData;
+  try {
+    cleanData = buildCleanData(req.body);
+  } catch (e) {
+    return res.status(400).json({ error: e.message });
+  }
+
+  try {
+    const updated = await prisma.movie.update({
+      where: { id },
+      data: cleanData
+    });
+
+    res.json(updated);
+  } catch (e) {
+    console.error(e);
+    if (e.code === 'P2025') {
+      // Prisma "record not found"
+      return res.status(404).json({ error: 'Movie not found' });
+    }
+    res.status(500).json({ error: 'Failed to update movie' });
+  }
+});
+
+// DELETE /movies/:id – удаление фильма
+router.delete('/:id', async function (req, res) {
+  const id = Number.parseInt(req.params.id, 10);
+  if (Number.isNaN(id)) {
+    return res.status(400).json({ error: 'Invalid movie id' });
+  }
+
+  try {
+    await prisma.movie.delete({
+      where: { id }
+    });
+
+    res.status(204).send();
+  } catch (e) {
+    console.error(e);
+    if (e.code === 'P2025') {
+      return res.status(404).json({ error: 'Movie not found' });
+    }
+    res.status(500).json({ error: 'Failed to delete movie' });
+  }
 });

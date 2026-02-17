@@ -12,7 +12,7 @@
     <div class="content">
       
       <div class="video">
-        <h2>Трейлер</h2>
+        <h2>Treiler</h2>
         <div class="video-wrapper">
           <iframe
             v-if="movie?.trailer?.search(/youtube/) !== -1"
@@ -22,26 +22,26 @@
           ></iframe>
           <video v-else controls>
             <source :src="movie.trailer" type="video/mp4" />
-            Ваш браузер не поддерживает видео.
+            Sinu brauser ei toeta videot.
           </video>
         </div>
       </div>
 
       
       <div class="details">
-        <h3>Информация о фильме</h3>
-        <p><strong>Жанр:</strong> {{ movie?.genre }}</p>
-        <p><strong>Длительность:</strong> {{ movie?.length }}</p>
-        <p><strong>Язык:</strong> {{ movie?.language }}</p>
-        <p><strong>Описание:</strong></p>
+        <h3>Filmi info</h3>
+        <p><strong>Žanr:</strong> {{ movie?.genre }}</p>
+        <p><strong>Kestus:</strong> {{ movie?.length }}</p>
+        <p><strong>Keel:</strong> {{ movie?.language }}</p>
+        <p><strong>Kirjeldus:</strong></p>
         <p>{{ movie.description }}</p>
 
         <div class="buttons">
           <router-link :to="`/movie-select/${movie.id}`">
-            <button class="btn booking-btn">→ Оформить билет</button>
+            <button class="btn booking-btn">→ Osta pilet</button>
           </router-link>
           <router-link to="/">
-            <button class="btn back-btn">← Вернуться к афише</button>
+            <button class="btn back-btn">← Tagasi plakati juurde</button>
           </router-link>
         </div>
       </div>
@@ -75,17 +75,25 @@ let movies = [
     id: 2,
     title: 'The Glassworker',
     length: '—',
-    genre: 'Анимация, Драма',
+    genre: 'Animatsioon, Draama',
     posterSmall: 'src/assets/poster2.jpg',
     banner: 'src/assets/banner2.jpg',
     trailer: 'https://www.youtube.com/embed/gn2o3shXU8U',
-    language: 'Английский',
-    description: 'Описание фильма The Glassworker'
+    language: 'Inglise',
+    description: 'Filmi kirjeldus The Glassworker'
   },
-  
 ]
 
-movies = await fetch(`${API_URL}/movies`).then(r => r.json())
+// Пытаемся подменить список фильмов данными с бэкенда,
+// но если он недоступен, оставляем локальный список.
+try {
+  const res = await fetch(`${API_URL}/movies`)
+  if (res.ok) {
+    movies = await res.json()
+  }
+} catch (e) {
+  console.error('Не удалось загрузить фильмы с бэкенда, используем локальные данные', e)
+}
 
 const movie = ref({})
 

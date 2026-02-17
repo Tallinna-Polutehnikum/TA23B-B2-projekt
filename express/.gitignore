@@ -2,3 +2,9 @@ node_modules/
 dist/
 *.env*
 !.env.template
+dev.db
+
+# Prisma generated files
+/generated/
+.prisma/
+dev.db

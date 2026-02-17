@@ -16,6 +16,7 @@
           <router-link :to="`/movie/${movie.id}`">
             <button class="btn">Rohkem infot →</button>
           </router-link>
+          
         </div>
       </div>
     </div>
@@ -67,8 +68,16 @@ let movies = [
     description: 'Filmi kirjeldus 5'
   }
 ]
-
-movies = await fetch(`${API_URL}/movies`).then(r => r.json())
+// Пытаемся загрузить фильмы с бэкенда, но не падаем,
+// если бэкенд недоступен (остаётся локальный список).
+try {
+  const res = await fetch(`${API_URL}/movies`)
+  if (res.ok) {
+    movies = await res.json()
+  }
+} catch (e) {
+  console.error('Не удалось загрузить фильмы с бэкенда, используем локальные данные', e)
+}
 </script>
 
 <style scoped>

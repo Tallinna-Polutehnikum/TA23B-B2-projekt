@@ -1,6 +1,6 @@
 # Generic Cinema backend :D
 
-
+npx prisma studio
 
 ## Getting started
 
@@ -33,6 +33,10 @@ And then run migration to create tables
 
 ```terminal
 npx prisma migrate dev
+```
+
+```terminal
+npx prisma generate
 ```
 
 

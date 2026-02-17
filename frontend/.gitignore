@@ -20,3 +20,23 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build/cache directories
+.nuxt/
+.cache/
+.vuepress/dist
+coverage/
+*.local
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+components.d.ts
+typed-router.d.ts
