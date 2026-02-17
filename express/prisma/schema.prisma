@@ -21,6 +21,11 @@ enum TicketStatus {
   CANCELLED
 }
 
+enum UserRole {
+  USER
+  ADMIN
+}
+
 // -----------------------------
 // USERS (cuid primary key)
 // -----------------------------
@@ -28,8 +33,10 @@ model User {
   id        String   @id @default(cuid())
   email     String   @unique
   name      String?
+  password  String
   tickets   Ticket[]
   createdAt DateTime @default(now())
+  role      UserRole @default(USER)
 }
 
 // -----------------------------
