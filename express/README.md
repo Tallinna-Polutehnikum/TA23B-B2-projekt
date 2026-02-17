@@ -35,6 +35,10 @@ And then run migration to create tables
 npx prisma migrate dev
 ```
 
+```terminal
+npx prisma generate
+```
+
 
 ### Database changes
 ```terminal
