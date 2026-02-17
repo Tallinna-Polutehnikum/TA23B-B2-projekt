@@ -2,6 +2,7 @@ import prisma from '../prismaClient.js'
 
 const moviesData = [
   {
+    id: 1,
     title: 'Põgenev mees',
     description:
       'Miljonid jahivad. Üks põgeneb. Kõik vaatavad. Põnev ulmepõnevik põhineb Stephen Kingi romaanil.',
@@ -17,6 +18,7 @@ const moviesData = [
     trailer: 'https://www.youtube.com/embed/ThWT4XwUcug'
   },
   {
+    id: 2,
     title: 'The Glassworker',
     description:
       'Lüüriline animatsioonifilm noorest klaasipuhujast ja tema lapsepõlvesõbrast sõja taustal.',
@@ -38,7 +40,7 @@ async function main() {
 
   for (const movie of moviesData) {
     const created = await prisma.movie.upsert({
-      where: { title: movie.title },
+      where: { id: movie.id },
       update: movie,
       create: movie
     })
