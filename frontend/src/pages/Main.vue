@@ -1,12 +1,15 @@
 <template>
   <div class="main-page">
     <h1>Filmi plakat</h1>
-    <div class="movie-list">
-      <div class="movie-item" v-for="movie in movies" :key="movie.id">
-        
-        <img :src="movie.posterSmall" alt="" class="poster" />
+    <router-link to="/admin/add-film">
+      <button class="btn admin-btn">Admin: Add New Film</button>
+    </router-link>
 
-        
+    <div class="movie-list">
+      <div v-for="movie in movies" :key="movie.id" class="movie-item">
+
+        <img alt="" class="poster" :src="movie.posterSmall">
+
         <div class="info">
           <h2>{{ movie.title }}</h2>
           <p><strong>Žanr:</strong> {{ movie?.genre }}</p>
@@ -16,7 +19,7 @@
           <router-link :to="`/movie/${movie.id}`">
             <button class="btn">Rohkem infot →</button>
           </router-link>
-          
+
         </div>
       </div>
     </div>
@@ -24,60 +27,37 @@
 </template>
 
 <script setup>
-import { API_URL } from '@/main';
+  import { API_URL } from '@/main'
 
-let movies = [
-  {
-    id: 1,
-    title: 'Põgenev mees',
-    length: '2h 13min',
-    genre: 'Märul, Ulmefilm, Thriller',
-    posterSmall: '/src/assets/poster1.jpg',
-    description: 'Mitte kuigi kauges tulevikus on riigi…'
-  },
-  {
-    id: 2,
-    title: 'The Glassworker',
-    length: '1h 30min',
-    genre: 'Animatsioon, Draama',
-    posterSmall: '/src/assets/poster2.jpg',
-    description: 'Filmi kirjeldus The Glassworker'
-  },
-  {
-    id: 3,
-    title: 'Film 3',
-    length: '1h 45min',
-    genre: 'Õudusfilm',
-    posterSmall: '/src/assets/poster3.jpg',
-    description: 'Filmi kirjeldus 3'
-  },
-  {
-    id: 4,
-    title: 'Film 4',
-    length: '2h 00min',
-    genre: 'Ulme',
-    posterSmall: '/src/assets/poster4.jpg',
-    description: 'Filmi kirjeldus 4'
-  },
-  {
-    id: 5,
-    title: 'Film 5',
-    length: '1h 50min',
-    genre: 'Koomika',
-    posterSmall: '/src/assets/poster5.jpg',
-    description: 'Filmi kirjeldus 5'
+  let movies = [
+    {
+      id: 1,
+      title: 'Põgenev mees',
+      length: '2h 13min',
+      genre: 'Märul, Ulmefilm, Thriller',
+      posterSmall: '/src/assets/poster1.jpg',
+      description: 'Mitte kuigi kauges tulevikus on riigi…',
+    },
+    {
+      id: 2,
+      title: 'The Glassworker',
+      length: '1h 30min',
+      genre: 'Animatsioon, Draama',
+      posterSmall: '/src/assets/poster2.jpg',
+      description: 'Filmi kirjeldus The Glassworker',
+    },
+
+  ]
+  // Пытаемся загрузить фильмы с бэкенда, но не падаем,
+  // если бэкенд недоступен (остаётся локальный список).
+  try {
+    const res = await fetch(`${API_URL}/movies`)
+    if (res.ok) {
+      movies = await res.json()
+    }
+  } catch (error) {
+    console.error('Не удалось загрузить фильмы с бэкенда, используем локальные данные', error)
   }
-]
-// Пытаемся загрузить фильмы с бэкенда, но не падаем,
-// если бэкенд недоступен (остаётся локальный список).
-try {
-  const res = await fetch(`${API_URL}/movies`)
-  if (res.ok) {
-    movies = await res.json()
-  }
-} catch (e) {
-  console.error('Не удалось загрузить фильмы с бэкенда, используем локальные данные', e)
-}
 </script>
 
 <style scoped>
@@ -91,7 +71,7 @@ try {
 
 .movie-list {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 30px;
 }
 
@@ -127,5 +107,14 @@ try {
 
 .btn:hover {
   background: #f6121d;
+}
+
+.admin-btn {
+  margin-bottom: 20px;
+  background: #007bff;
+}
+
+.admin-btn:hover {
+  background: #0056b3;
 }
 </style>
