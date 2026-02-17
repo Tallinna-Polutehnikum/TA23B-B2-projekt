@@ -16,6 +16,7 @@
           <router-link :to="`/movie/${movie.id}`">
             <button class="btn">Rohkem infot →</button>
           </router-link>
+          
         </div>
       </div>
     </div>
