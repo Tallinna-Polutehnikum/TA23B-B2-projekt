@@ -12,10 +12,13 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Cards: typeof import('./src/components/cards.vue')['default']
+    LoginModal: typeof import('./src/components/LoginModal.vue')['default']
     MovieDescription: typeof import('./src/components/MovieDescription.vue')['default']
     MovieHeader: typeof import('./src/components/MovieHeader.vue')['default']
     MovieInfo: typeof import('./src/components/MovieInfo.vue')['default']
     MovieTrailer: typeof import('./src/components/MovieTrailer.vue')['default']
+    Navbar: typeof import('./src/components/Navbar.vue')['default']
+    RegisterModal: typeof import('./src/components/RegisterModal.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
