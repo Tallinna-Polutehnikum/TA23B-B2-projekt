@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <Navbar />
     <Suspense>
       <router-view v-slot="{ Component }">
         <component :is="Component" />
@@ -9,7 +10,6 @@
 </template>
 
 <script setup>
-  import { Suspense } from 'vue'
-
-//
+import { Suspense } from 'vue';
+import Navbar from '@/components/Navbar.vue';
 </script>

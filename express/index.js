@@ -3,6 +3,7 @@ import express from 'express'
 import cors from 'cors'
 import { PrismaMariaDb } from '@prisma/adapter-mariadb';
 import MovieController from './controllers/MovieController.js';
+import UserController from './controllers/UserController.js';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/movies', MovieController);
+app.use('/users', UserController);
 
 const server = app.listen(process.env.BACKEND_PORT, () =>
   console.log(`🚀 Server ready at: http://localhost:${process.env.BACKEND_PORT}`),
