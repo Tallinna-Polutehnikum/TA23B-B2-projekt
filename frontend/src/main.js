@@ -4,19 +4,19 @@
  * Bootstraps Vuetify and other plugins then mounts the App`
  */
 
+// Composables
+import { createApp } from 'vue'
+
 // Plugins
 import { registerPlugins } from '@/plugins'
 
 // Components
 import App from './App.vue'
 
-// Composables
-import { createApp } from 'vue'
-
 // Styles
 import 'unfonts.css'
 
-export const API_URL = "http://localhost:3001";
+export const API_URL = 'http://localhost:3003'
 
 const app = createApp(App)
 

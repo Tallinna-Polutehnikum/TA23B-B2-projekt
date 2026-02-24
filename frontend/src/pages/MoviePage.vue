@@ -1,6 +1,6 @@
 <template>
   <div class="movie-page">
-    
+
     <div
       class="banner"
       :style="{ backgroundImage: `url(${movie.banner || movie.posterSmall})` }"
@@ -8,26 +8,24 @@
       <h1>{{ movie.title }}</h1>
     </div>
 
-    
     <div class="content">
-      
+
       <div class="video">
         <h2>Treiler</h2>
         <div class="video-wrapper">
           <iframe
             v-if="movie?.trailer?.search(/youtube/) !== -1"
-            :src="movie?.trailer"
-            frameborder="0"
             allowfullscreen
-          ></iframe>
+            frameborder="0"
+            :src="movie?.trailer"
+          />
           <video v-else controls>
-            <source :src="movie.trailer" type="video/mp4" />
+            <source :src="movie.trailer" type="video/mp4">
             Sinu brauser ei toeta videot.
           </video>
         </div>
       </div>
 
-      
       <div class="details">
         <h3>Filmi info</h3>
         <p><strong>Žanr:</strong> {{ movie?.genre }}</p>
@@ -50,56 +48,54 @@
 </template>
 
 <script setup>
-import { API_URL } from '@/main'
-import { ref, onBeforeMount } from 'vue'
-import { useRoute } from 'vue-router'
+  import { onBeforeMount, ref } from 'vue'
+  import { useRoute } from 'vue-router'
+  import { API_URL } from '@/main'
 
-const route = useRoute()
-const movieId = route.params.id
+  const route = useRoute()
+  const movieId = route.params.id
 
+  let movies = [
+    {
+      id: 1,
+      title: 'Pogenev mees',
+      length: '2h 13min',
+      genre: 'Marul, Ulmefilm, Thriller',
+      posterSmall: 'src/assets/poster1.jpg',
+      banner: 'src/assets/banner1.jpg',
+      trailer: 'https://www.youtube.com/embed/ThWT4XwUcug',
+      language: 'Estonski',
+      description: 'Miljonid jahivad Uks pogeneb Koik vaatavad Kohe algab maailma populaarseim telemang Pogenev mees 1982 aastal ilmutas oudustemeister Stephen King Richard Bachmani pseudonymi all haarava ulmoponeviku The Running Man mis kirjeldas kauges tulevikus aastal 2025 ulipopulaarset telemangu mille voitmiseks on vaja lihtsalt 30 paeva ellu jaada Samal ajal kui sulle peavad jahti elukutselised kutid ning praktiliselt kogu elanikkond Sel suvel toob filmi Pogenev mees ekraanile lennuka stiiliga Edgar Wright Shaun of the Dead Baby Driver peaosas Glen Powell Top Gun Maverick Lisaks talle teevad kaasa Josh Brolin Duun Colman Domingo Michael Cera Katy OBrian William Z Macy Lee Pace David Zayas ja teised',
+    },
+    {
+      id: 2,
+      title: 'The Glassworker',
+      length: '—',
+      genre: 'Animatsioon, Draama',
+      posterSmall: 'src/assets/poster2.jpg',
+      banner: 'src/assets/banner2.jpg',
+      trailer: 'https://www.youtube.com/embed/gn2o3shXU8U',
+      language: 'Inglise',
+      description: 'Filmi kirjeldus The Glassworker',
+    },
+  ]
 
-let movies = [
-  {
-    id: 1,
-    title: 'Pogenev mees',
-    length: '2h 13min',
-    genre: 'Marul, Ulmefilm, Thriller',
-    posterSmall: 'src/assets/poster1.jpg',
-    banner: 'src/assets/banner1.jpg',
-    trailer: 'https://www.youtube.com/embed/ThWT4XwUcug',
-    language: 'Estonski',
-    description: 'Miljonid jahivad Uks pogeneb Koik vaatavad Kohe algab maailma populaarseim telemang Pogenev mees 1982 aastal ilmutas oudustemeister Stephen King Richard Bachmani pseudonymi all haarava ulmoponeviku The Running Man mis kirjeldas kauges tulevikus aastal 2025 ulipopulaarset telemangu mille voitmiseks on vaja lihtsalt 30 paeva ellu jaada Samal ajal kui sulle peavad jahti elukutselised kutid ning praktiliselt kogu elanikkond Sel suvel toob filmi Pogenev mees ekraanile lennuka stiiliga Edgar Wright Shaun of the Dead Baby Driver peaosas Glen Powell Top Gun Maverick Lisaks talle teevad kaasa Josh Brolin Duun Colman Domingo Michael Cera Katy OBrian William Z Macy Lee Pace David Zayas ja teised'
-}
-,
-  {
-    id: 2,
-    title: 'The Glassworker',
-    length: '—',
-    genre: 'Animatsioon, Draama',
-    posterSmall: 'src/assets/poster2.jpg',
-    banner: 'src/assets/banner2.jpg',
-    trailer: 'https://www.youtube.com/embed/gn2o3shXU8U',
-    language: 'Inglise',
-    description: 'Filmi kirjeldus The Glassworker'
-  },
-]
-
-// Пытаемся подменить список фильмов данными с бэкенда,
-// но если он недоступен, оставляем локальный список.
-try {
-  const res = await fetch(`${API_URL}/movies`)
-  if (res.ok) {
-    movies = await res.json()
+  // Пытаемся подменить список фильмов данными с бэкенда,
+  // но если он недоступен, оставляем локальный список.
+  try {
+    const res = await fetch(`${API_URL}/movies`)
+    if (res.ok) {
+      movies = await res.json()
+    }
+  } catch (error) {
+    console.error('Не удалось загрузить фильмы с бэкенда, используем локальные данные', error)
   }
-} catch (e) {
-  console.error('Не удалось загрузить фильмы с бэкенда, используем локальные данные', e)
-}
 
-const movie = ref({})
+  const movie = ref({})
 
-onBeforeMount(() => {
-  movie.value = movies.find(m => m.id == movieId) || movies[0]
-})
+  onBeforeMount(() => {
+    movie.value = movies.find(m => m.id == movieId) || movies[0]
+  })
 </script>
 
 <style scoped>
@@ -139,7 +135,7 @@ onBeforeMount(() => {
 .video-wrapper {
   width: 900px;
   max-width: 100%;
-  height: 506px; 
+  height: 506px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 0 40px rgba(0,0,0,0.7);
