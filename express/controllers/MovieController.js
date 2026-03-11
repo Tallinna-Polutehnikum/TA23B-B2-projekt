@@ -32,6 +32,11 @@ function buildCleanData(body) {
     }
   }
 
+  // assign sensible defaults for required properties not provided
+  if (cleanData.basePrice === undefined) {
+    cleanData.basePrice = 0; // Prisma Decimal; JS number will be converted automatically
+  }
+
   return cleanData;
 }
 
