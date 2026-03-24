@@ -1,3 +1,4 @@
+
 import { fileURLToPath, URL } from 'node:url'
 import Vue from '@vitejs/plugin-vue'
 import Fonts from 'unplugin-fonts/vite'
@@ -61,6 +62,6 @@ export default defineConfig({
     ],
   },
   server: {
-    port: 3000,
+    port: 5173,
   },
 })

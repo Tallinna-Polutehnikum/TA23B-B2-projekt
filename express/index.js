@@ -1,7 +1,6 @@
 import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
-import { PrismaMariaDb } from '@prisma/adapter-mariadb';
 import MovieController from './controllers/MovieController.js';
 import UserController from './controllers/UserController.js';
 
@@ -23,6 +22,10 @@ app.get('/', (req, res) => {
 app.use('/movies', MovieController);
 app.use('/users', UserController);
 
-const server = app.listen(process.env.BACKEND_PORT, () =>
-  console.log(`🚀 Server ready at: http://localhost:${process.env.BACKEND_PORT}`),
+const PORT = process.env.BACKEND_PORT || 3000;
+
+const server = app.listen(PORT, () =>
+  console.log(`🚀 Server ready at: http://localhost:${PORT}`),
 );
+
+export default app;
